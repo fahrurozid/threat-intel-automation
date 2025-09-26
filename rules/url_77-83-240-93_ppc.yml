@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 77.83.240.93'
+id: df361772-fe67-4bfb-be63-d13d7a90764a
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://77.83.240.93/ppc'
+references:
+- https://urlhaus.abuse.ch/url/77.83.240.93/ppc/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://77.83.240.93/ppc
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

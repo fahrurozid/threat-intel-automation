@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: s.cuckstudios.su'
+id: 29e9842c-6942-4e0a-827d-265796e05787
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://s.cuckstudios.su/fc'
+references:
+- https://urlhaus.abuse.ch/url/s.cuckstudios.su/fc/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://s.cuckstudios.su/fc
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

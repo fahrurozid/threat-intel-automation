@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: doxxingservices.shop'
+id: da0f9166-2a50-4e4a-87f5-910af5982888
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://doxxingservices.shop/downloadme.sh'
+references:
+- https://urlhaus.abuse.ch/url/doxxingservices.shop/downloadme.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://doxxingservices.shop/downloadme.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

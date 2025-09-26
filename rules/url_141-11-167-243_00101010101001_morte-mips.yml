@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 141.11.167.243'
+id: 022b30e5-3445-45c4-93f6-cdff69b4e951
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://141.11.167.243/00101010101001/morte.mips'
+references:
+- https://urlhaus.abuse.ch/url/141.11.167.243/00101010101001/morte.mips/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://141.11.167.243/00101010101001/morte.mips
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

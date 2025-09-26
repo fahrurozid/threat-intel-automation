@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: md.hecynya.ru'
+id: 0c018255-dfac-42a9-bbb4-647aa30c016c
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://md.hecynya.ru/5cf7aca4edcec33f5cc014b25dfff547'
+references:
+- https://urlhaus.abuse.ch/url/md.hecynya.ru/5cf7aca4edcec33f5cc014b25dfff547/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://md.hecynya.ru/5cf7aca4edcec33f5cc014b25dfff547
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

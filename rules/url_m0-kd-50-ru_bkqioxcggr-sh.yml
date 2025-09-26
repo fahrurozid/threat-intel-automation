@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: m0.kd-50.ru'
+id: 8c31d08b-13bc-42b2-9cc8-3ab089c978e0
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://m0.kd-50.ru/bkqioxcggr.sh'
+references:
+- https://urlhaus.abuse.ch/url/m0.kd-50.ru/bkqioxcggr.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://m0.kd-50.ru/bkqioxcggr.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

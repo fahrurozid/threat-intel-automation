@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 178.16.54.200'
+id: be6ced97-1bd3-417d-ac23-18181dca9977
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://178.16.54.200/f8nus4b/index.php'
+references:
+- https://urlhaus.abuse.ch/url/178.16.54.200/f8nus4b/index.php/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://178.16.54.200/f8nus4b/index.php
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

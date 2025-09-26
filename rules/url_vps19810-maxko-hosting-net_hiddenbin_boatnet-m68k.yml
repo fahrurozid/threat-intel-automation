@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: vps19810.maxko-hosting.net'
+id: 9fd0d3a3-a6d1-48fd-a342-49b81bdb112b
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://vps19810.maxko-hosting.net/hiddenbin/boatnet.m68k'
+references:
+- https://urlhaus.abuse.ch/url/vps19810.maxko-hosting.net/hiddenbin/boatnet.m68k/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://vps19810.maxko-hosting.net/hiddenbin/boatnet.m68k
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: wrxcnc.com'
+id: da455feb-33c0-4e49-8f3f-d5fbe8d2d2e5
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://wrxcnc.com/renji/renji.i686'
+references:
+- https://urlhaus.abuse.ch/url/wrxcnc.com/renji/renji.i686/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://wrxcnc.com/renji/renji.i686
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

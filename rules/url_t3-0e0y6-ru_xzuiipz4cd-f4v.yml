@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: t3.0e0y6.ru'
+id: af8658cc-aaa1-493c-967b-78d691753ca8
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://t3.0e0y6.ru/xzuiipz4cd.f4v'
+references:
+- https://urlhaus.abuse.ch/url/t3.0e0y6.ru/xzuiipz4cd.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://t3.0e0y6.ru/xzuiipz4cd.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

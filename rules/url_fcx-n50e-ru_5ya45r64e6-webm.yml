@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: fcx.n50e.ru'
+id: 9251b91e-0494-428c-bea3-5d73f008a258
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://fcx.n50e.ru/5ya45r64e6.webm'
+references:
+- https://urlhaus.abuse.ch/url/fcx.n50e.ru/5ya45r64e6.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://fcx.n50e.ru/5ya45r64e6.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

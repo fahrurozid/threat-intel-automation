@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: suspicious-northcutt.91-92-240-220.plesk.page'
+id: d093bc37-bc89-4b13-a194-23294b07d91b
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://suspicious-northcutt.91-92-240-220.plesk.page/hiddenbin/mynode.ppc_32'
+references:
+- https://urlhaus.abuse.ch/url/suspicious-northcutt.91-92-240-220.plesk.page/hiddenbin/mynode.ppc_32/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://suspicious-northcutt.91-92-240-220.plesk.page/hiddenbin/mynode.ppc_32
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

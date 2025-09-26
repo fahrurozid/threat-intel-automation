@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 107.175.246.22'
+id: 552704e4-77f8-400a-832f-27a358d1e030
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://107.175.246.22/466/clearpicture________00995868689494859699969966556.PHP'
+references:
+- https://urlhaus.abuse.ch/url/107.175.246.22/466/clearpicture________00995868689494859699969966556.PHP/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://107.175.246.22/466/clearpicture________00995868689494859699969966556.PHP
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

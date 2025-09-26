@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: rafts.top'
+id: 12422a51-d057-43f6-b1ff-2d48b8470cff
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://rafts.top/MMM.exe'
+references:
+- https://urlhaus.abuse.ch/url/rafts.top/MMM.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://rafts.top/MMM.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

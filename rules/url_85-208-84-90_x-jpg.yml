@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 85.208.84.90'
+id: 55e845a5-f204-4039-a858-4e8a4dfdb04e
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://85.208.84.90/x.jpg'
+references:
+- https://urlhaus.abuse.ch/url/85.208.84.90/x.jpg/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://85.208.84.90/x.jpg
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

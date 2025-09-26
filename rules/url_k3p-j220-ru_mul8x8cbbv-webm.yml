@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: k3p.j220.ru'
+id: 45fc27e9-0948-48ed-a0fb-1f73825493ae
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://k3p.j220.ru/mul8x8cbbv.webm'
+references:
+- https://urlhaus.abuse.ch/url/k3p.j220.ru/mul8x8cbbv.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://k3p.j220.ru/mul8x8cbbv.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

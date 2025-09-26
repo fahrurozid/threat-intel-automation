@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: dpaste.org'
+id: da62562b-f890-4b1c-b322-7c197ca5b3a1
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://dpaste.org/SzXV2/raw'
+references:
+- https://urlhaus.abuse.ch/url/dpaste.org/SzXV2/raw/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://dpaste.org/SzXV2/raw
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

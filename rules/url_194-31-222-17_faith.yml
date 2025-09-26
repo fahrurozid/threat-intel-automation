@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 194.31.222.17'
+id: c112af54-1fce-4fe7-9a97-614789b29ac2
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://194.31.222.17/faith'
+references:
+- https://urlhaus.abuse.ch/url/194.31.222.17/faith/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://194.31.222.17/faith
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

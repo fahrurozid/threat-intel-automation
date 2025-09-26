@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: v2.m-754.ru'
+id: a1201413-d609-44e8-8f45-c41d3ee913a9
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://v2.m-754.ru/ncp6170a2m.sh'
+references:
+- https://urlhaus.abuse.ch/url/v2.m-754.ru/ncp6170a2m.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://v2.m-754.ru/ncp6170a2m.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

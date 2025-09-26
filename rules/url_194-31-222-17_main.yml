@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 194.31.222.17'
+id: e51909a1-ca2d-47be-99c9-276f4f071fc6
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://194.31.222.17/main'
+references:
+- https://urlhaus.abuse.ch/url/194.31.222.17/main/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://194.31.222.17/main
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

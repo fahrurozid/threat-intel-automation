@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: inspiring-jepsen.91-92-240-220.plesk.page'
+id: f10eb112-d7e3-4607-8661-3e54de0ad3dd
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://inspiring-jepsen.91-92-240-220.plesk.page/hiddenbin/mynode.arm7_32'
+references:
+- https://urlhaus.abuse.ch/url/inspiring-jepsen.91-92-240-220.plesk.page/hiddenbin/mynode.arm7_32/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://inspiring-jepsen.91-92-240-220.plesk.page/hiddenbin/mynode.arm7_32
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

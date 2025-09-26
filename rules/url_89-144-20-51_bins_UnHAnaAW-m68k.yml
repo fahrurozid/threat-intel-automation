@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 89.144.20.51'
+id: 7ee6770c-214f-418d-930a-c6cf41f3cbc3
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://89.144.20.51/bins/UnHAnaAW.m68k'
+references:
+- https://urlhaus.abuse.ch/url/89.144.20.51/bins/UnHAnaAW.m68k/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://89.144.20.51/bins/UnHAnaAW.m68k
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

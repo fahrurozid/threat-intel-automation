@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: drectggy.one'
+id: 5ea50db3-8815-4b7a-a18f-dea74b2e0f78
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://drectggy.one'
+references:
+- https://urlhaus.abuse.ch/url/drectggy.one/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://drectggy.one
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

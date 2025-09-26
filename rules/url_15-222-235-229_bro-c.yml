@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 15.222.235.229'
+id: d15ddc83-9891-4b62-a0d1-bae8ccf2b7ec
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://15.222.235.229/bro.c'
+references:
+- https://urlhaus.abuse.ch/url/15.222.235.229/bro.c/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://15.222.235.229/bro.c
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

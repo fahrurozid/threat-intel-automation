@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: aliyses2.icu'
+id: 2a61d944-34ec-4474-aa0a-66f7b48a7025
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://aliyses2.icu/'
+references:
+- https://urlhaus.abuse.ch/url/aliyses2.icu//
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://aliyses2.icu/
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

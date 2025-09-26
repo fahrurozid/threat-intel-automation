@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 107.175.246.22'
+id: 195475c1-328b-418d-8a03-6ee25abaacba
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://107.175.246.22/img/zyn/IMAGESG____099988777669900099009EEEEEEEEEE.hta'
+references:
+- https://urlhaus.abuse.ch/url/107.175.246.22/img/zyn/IMAGESG____099988777669900099009EEEEEEEEEE.hta/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://107.175.246.22/img/zyn/IMAGESG____099988777669900099009EEEEEEEEEE.hta
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

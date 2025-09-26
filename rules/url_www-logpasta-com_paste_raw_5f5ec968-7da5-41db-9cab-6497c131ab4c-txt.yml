@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: www.logpasta.com'
+id: aaeecf60-b242-43de-bcb4-39ec1a88c1b6
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://www.logpasta.com/paste/raw/5f5ec968-7da5-41db-9cab-6497c131ab4c.txt'
+references:
+- https://urlhaus.abuse.ch/url/www.logpasta.com/paste/raw/5f5ec968-7da5-41db-9cab-6497c131ab4c.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://www.logpasta.com/paste/raw/5f5ec968-7da5-41db-9cab-6497c131ab4c.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

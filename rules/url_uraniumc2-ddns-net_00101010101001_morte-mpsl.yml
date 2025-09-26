@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: uraniumc2.ddns.net'
+id: fc342073-7d3f-40cb-81cd-f5dc256f0fb9
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://uraniumc2.ddns.net/00101010101001/morte.mpsl'
+references:
+- https://urlhaus.abuse.ch/url/uraniumc2.ddns.net/00101010101001/morte.mpsl/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://uraniumc2.ddns.net/00101010101001/morte.mpsl
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

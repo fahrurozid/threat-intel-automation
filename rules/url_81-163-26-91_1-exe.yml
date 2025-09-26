@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 81.163.26.91'
+id: ff1e279c-8c31-4b04-9bc1-50b5e23884d3
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://81.163.26.91/1.exe'
+references:
+- https://urlhaus.abuse.ch/url/81.163.26.91/1.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://81.163.26.91/1.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

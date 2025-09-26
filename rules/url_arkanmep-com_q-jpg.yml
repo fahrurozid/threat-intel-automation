@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: arkanmep.com'
+id: df474265-5e5e-4314-822a-59d9bc88f6b7
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://arkanmep.com/q.jpg'
+references:
+- https://urlhaus.abuse.ch/url/arkanmep.com/q.jpg/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://arkanmep.com/q.jpg
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

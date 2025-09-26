@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: goldseason.hu'
+id: 802ff087-6b81-4ff0-ac56-f897d4240c1c
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://goldseason.hu/Underfra.hhk'
+references:
+- https://urlhaus.abuse.ch/url/goldseason.hu/Underfra.hhk/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://goldseason.hu/Underfra.hhk
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

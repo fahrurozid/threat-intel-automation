@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: t1.cdn-748.ru'
+id: dc9da35a-f45a-4c16-92be-c94eee663e64
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://t1.cdn-748.ru/46h1dkol69.sh'
+references:
+- https://urlhaus.abuse.ch/url/t1.cdn-748.ru/46h1dkol69.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://t1.cdn-748.ru/46h1dkol69.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

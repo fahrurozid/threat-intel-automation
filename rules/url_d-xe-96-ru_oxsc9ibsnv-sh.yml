@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: d.xe-96.ru'
+id: 0d09945a-f655-45db-a947-06064f1d99f2
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://d.xe-96.ru/oxsc9ibsnv.sh'
+references:
+- https://urlhaus.abuse.ch/url/d.xe-96.ru/oxsc9ibsnv.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://d.xe-96.ru/oxsc9ibsnv.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

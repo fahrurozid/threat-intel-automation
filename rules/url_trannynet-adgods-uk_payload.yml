@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: trannynet.adgods.uk'
+id: 376790cc-32c8-4391-a0a2-3a6c504a9cb1
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://trannynet.adgods.uk/payload'
+references:
+- https://urlhaus.abuse.ch/url/trannynet.adgods.uk/payload/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://trannynet.adgods.uk/payload
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

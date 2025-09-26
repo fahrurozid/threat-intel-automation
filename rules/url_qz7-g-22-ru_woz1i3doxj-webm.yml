@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: qz7.g-22.ru'
+id: b0bf660c-e0f5-4e20-b897-63796c1452f1
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://qz7.g-22.ru/woz1i3doxj.webm'
+references:
+- https://urlhaus.abuse.ch/url/qz7.g-22.ru/woz1i3doxj.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://qz7.g-22.ru/woz1i3doxj.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

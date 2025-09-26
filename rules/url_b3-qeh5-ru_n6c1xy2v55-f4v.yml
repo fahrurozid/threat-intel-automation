@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: b3.qeh5.ru'
+id: 15561092-a8b1-4b87-96aa-8bdb74f3a946
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://b3.qeh5.ru/n6c1xy2v55.f4v'
+references:
+- https://urlhaus.abuse.ch/url/b3.qeh5.ru/n6c1xy2v55.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://b3.qeh5.ru/n6c1xy2v55.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

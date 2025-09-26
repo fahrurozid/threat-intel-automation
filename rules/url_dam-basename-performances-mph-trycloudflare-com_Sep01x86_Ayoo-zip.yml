@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: dam-basename-performances-mph.trycloudflare.com'
+id: 4b41970f-d591-4604-9b92-0b8e73791b5f
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://dam-basename-performances-mph.trycloudflare.com/Sep01x86_Ayoo.zip'
+references:
+- https://urlhaus.abuse.ch/url/dam-basename-performances-mph.trycloudflare.com/Sep01x86_Ayoo.zip/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://dam-basename-performances-mph.trycloudflare.com/Sep01x86_Ayoo.zip
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

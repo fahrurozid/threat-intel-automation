@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 92.113.147.23'
+id: 97c540ba-8830-4e81-979d-2e0a1c3962f0
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://92.113.147.23/x86'
+references:
+- https://urlhaus.abuse.ch/url/92.113.147.23/x86/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://92.113.147.23/x86
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

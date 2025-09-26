@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: in.ditchibuprofen.com'
+id: 04c99b36-afb2-4fc5-9c7c-e552188d1844
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://in.ditchibuprofen.com/tz9npnodbl.sh'
+references:
+- https://urlhaus.abuse.ch/url/in.ditchibuprofen.com/tz9npnodbl.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://in.ditchibuprofen.com/tz9npnodbl.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

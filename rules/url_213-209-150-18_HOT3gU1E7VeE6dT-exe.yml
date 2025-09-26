@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 213.209.150.18'
+id: a023f795-cb95-4873-ab6c-ab442a8f7722
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://213.209.150.18/HOT3gU1E7VeE6dT.exe'
+references:
+- https://urlhaus.abuse.ch/url/213.209.150.18/HOT3gU1E7VeE6dT.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://213.209.150.18/HOT3gU1E7VeE6dT.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

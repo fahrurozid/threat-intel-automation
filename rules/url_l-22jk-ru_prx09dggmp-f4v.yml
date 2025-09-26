@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: l.22jk.ru'
+id: 1cf0a4cd-9f34-4d72-b91c-b78761e99217
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://l.22jk.ru/prx09dggmp.f4v'
+references:
+- https://urlhaus.abuse.ch/url/l.22jk.ru/prx09dggmp.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://l.22jk.ru/prx09dggmp.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

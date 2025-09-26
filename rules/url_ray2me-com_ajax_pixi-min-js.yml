@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: ray2me.com'
+id: e76ed2c3-852b-4912-a944-9c6fac59b9e3
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://ray2me.com/ajax/pixi.min.js'
+references:
+- https://urlhaus.abuse.ch/url/ray2me.com/ajax/pixi.min.js/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://ray2me.com/ajax/pixi.min.js
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

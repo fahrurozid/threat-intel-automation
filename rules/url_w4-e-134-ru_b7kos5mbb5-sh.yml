@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: w4.e-134.ru'
+id: efe3c702-ff2d-4e3a-9fb8-cdafd2283298
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://w4.e-134.ru/b7kos5mbb5.sh'
+references:
+- https://urlhaus.abuse.ch/url/w4.e-134.ru/b7kos5mbb5.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://w4.e-134.ru/b7kos5mbb5.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

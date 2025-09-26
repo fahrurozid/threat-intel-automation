@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 69.197.176.85'
+id: 95e90a80-f30c-40da-ac00-bdebfebb8f92
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://69.197.176.85/hiddenbin/boatnet.sh4'
+references:
+- https://urlhaus.abuse.ch/url/69.197.176.85/hiddenbin/boatnet.sh4/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://69.197.176.85/hiddenbin/boatnet.sh4
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

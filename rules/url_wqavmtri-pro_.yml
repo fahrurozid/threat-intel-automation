@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: wqavmtri.pro'
+id: c7412f57-33a1-43b8-992a-0746c5da4c9d
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://wqavmtri.pro/'
+references:
+- https://urlhaus.abuse.ch/url/wqavmtri.pro//
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://wqavmtri.pro/
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

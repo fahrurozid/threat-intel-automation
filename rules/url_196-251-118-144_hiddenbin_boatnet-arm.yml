@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 196.251.118.144'
+id: 937c5a88-b266-49a3-8991-d0d8c5209f94
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://196.251.118.144/hiddenbin/boatnet.arm'
+references:
+- https://urlhaus.abuse.ch/url/196.251.118.144/hiddenbin/boatnet.arm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://196.251.118.144/hiddenbin/boatnet.arm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

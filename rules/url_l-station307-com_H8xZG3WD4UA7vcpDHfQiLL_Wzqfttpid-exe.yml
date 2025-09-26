@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: l.station307.com'
+id: e534d78c-3d6c-4ead-8342-2151f983b19c
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://l.station307.com/H8xZG3WD4UA7vcpDHfQiLL/Wzqfttpid.exe'
+references:
+- https://urlhaus.abuse.ch/url/l.station307.com/H8xZG3WD4UA7vcpDHfQiLL/Wzqfttpid.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://l.station307.com/H8xZG3WD4UA7vcpDHfQiLL/Wzqfttpid.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

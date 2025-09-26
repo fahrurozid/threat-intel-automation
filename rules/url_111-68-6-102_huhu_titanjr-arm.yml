@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 111.68.6.102'
+id: c9d947bd-4009-44de-90ec-14219f600383
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://111.68.6.102/huhu/titanjr.arm'
+references:
+- https://urlhaus.abuse.ch/url/111.68.6.102/huhu/titanjr.arm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://111.68.6.102/huhu/titanjr.arm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: k.o-554.ru'
+id: 47d26cbe-06f3-48f3-8b3c-9f51687eee8f
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://k.o-554.ru/121lfj4pt9.sh'
+references:
+- https://urlhaus.abuse.ch/url/k.o-554.ru/121lfj4pt9.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://k.o-554.ru/121lfj4pt9.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

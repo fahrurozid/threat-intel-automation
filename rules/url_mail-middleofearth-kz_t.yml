@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: mail.middleofearth.kz'
+id: 0e0cb48f-450e-4acb-a048-a08f762f6a6c
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://mail.middleofearth.kz/t'
+references:
+- https://urlhaus.abuse.ch/url/mail.middleofearth.kz/t/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://mail.middleofearth.kz/t
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

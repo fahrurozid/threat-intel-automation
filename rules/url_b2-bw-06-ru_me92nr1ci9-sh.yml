@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: b2.bw-06.ru'
+id: 8f49a362-22c7-4741-ba74-8a67ce1ee1f2
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://b2.bw-06.ru/me92nr1ci9.sh'
+references:
+- https://urlhaus.abuse.ch/url/b2.bw-06.ru/me92nr1ci9.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://b2.bw-06.ru/me92nr1ci9.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 64.188.8.180'
+id: 51b4638b-5f0e-4efa-a6f5-e1ee041f8e8b
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://64.188.8.180/test.sh'
+references:
+- https://urlhaus.abuse.ch/url/64.188.8.180/test.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://64.188.8.180/test.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

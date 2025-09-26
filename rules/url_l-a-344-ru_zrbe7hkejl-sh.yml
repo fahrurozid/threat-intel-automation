@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: l.a-344.ru'
+id: a2ef1ff5-a3d8-4286-9537-c7d268eb03e6
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://l.a-344.ru/zrbe7hkejl.sh'
+references:
+- https://urlhaus.abuse.ch/url/l.a-344.ru/zrbe7hkejl.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://l.a-344.ru/zrbe7hkejl.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: e.b340.ru'
+id: b778cb14-ad18-40b5-938f-6ac21e79bf4e
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://e.b340.ru/bjnescjsae.webm'
+references:
+- https://urlhaus.abuse.ch/url/e.b340.ru/bjnescjsae.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://e.b340.ru/bjnescjsae.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

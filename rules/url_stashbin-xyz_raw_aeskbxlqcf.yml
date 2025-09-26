@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: stashbin.xyz'
+id: 08eb3a83-9051-4f79-86ef-74d2e4aea16a
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://stashbin.xyz/raw/aeskbxlqcf'
+references:
+- https://urlhaus.abuse.ch/url/stashbin.xyz/raw/aeskbxlqcf/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://stashbin.xyz/raw/aeskbxlqcf
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

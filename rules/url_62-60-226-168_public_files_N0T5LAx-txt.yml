@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 62.60.226.168'
+id: e2b8c360-9603-4ee1-8c02-3a6e17335270
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://62.60.226.168/public_files/N0T5LAx.txt'
+references:
+- https://urlhaus.abuse.ch/url/62.60.226.168/public_files/N0T5LAx.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://62.60.226.168/public_files/N0T5LAx.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

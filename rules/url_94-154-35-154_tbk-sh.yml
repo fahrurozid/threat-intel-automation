@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 94.154.35.154'
+id: c88495df-e822-4d26-81eb-508384fe5c73
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://94.154.35.154/tbk.sh'
+references:
+- https://urlhaus.abuse.ch/url/94.154.35.154/tbk.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://94.154.35.154/tbk.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

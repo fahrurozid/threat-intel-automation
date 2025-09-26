@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: dreninvinsar.vendendosonhos.icu'
+id: c0e531cf-c3d5-4467-aced-9f3075adb5e1
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://dreninvinsar.vendendosonhos.icu'
+references:
+- https://urlhaus.abuse.ch/url/dreninvinsar.vendendosonhos.icu/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://dreninvinsar.vendendosonhos.icu
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

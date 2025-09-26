@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: olgamostova.com'
+id: c23f3549-93f7-40c5-8ada-213103aab86a
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://olgamostova.com/CS/unserv.ttf'
+references:
+- https://urlhaus.abuse.ch/url/olgamostova.com/CS/unserv.ttf/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://olgamostova.com/CS/unserv.ttf
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

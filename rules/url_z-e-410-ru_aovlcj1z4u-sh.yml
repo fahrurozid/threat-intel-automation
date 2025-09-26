@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: z.e-410.ru'
+id: 7febaca5-bb79-4f88-8ea9-bdd7cbf2a8b0
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://z.e-410.ru/aovlcj1z4u.sh'
+references:
+- https://urlhaus.abuse.ch/url/z.e-410.ru/aovlcj1z4u.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://z.e-410.ru/aovlcj1z4u.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

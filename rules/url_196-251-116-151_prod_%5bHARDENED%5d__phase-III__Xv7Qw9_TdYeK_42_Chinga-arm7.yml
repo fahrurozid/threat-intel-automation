@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 196.251.116.151'
+id: fe013abf-ffdc-48bf-87eb-09435136add5
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://196.251.116.151/prod_%5bHARDENED%5d__phase-III__Xv7Qw9_TdYeK_42/Chinga.arm7'
+references:
+- https://urlhaus.abuse.ch/url/196.251.116.151/prod_%5bHARDENED%5d__phase-III__Xv7Qw9_TdYeK_42/Chinga.arm7/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://196.251.116.151/prod_%5bHARDENED%5d__phase-III__Xv7Qw9_TdYeK_42/Chinga.arm7
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

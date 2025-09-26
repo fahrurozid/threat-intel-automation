@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 147.45.125.103'
+id: 26ef69c0-10e1-4393-8281-cae70a3b92d3
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://147.45.125.103/LjEZs/uYtea.x86'
+references:
+- https://urlhaus.abuse.ch/url/147.45.125.103/LjEZs/uYtea.x86/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://147.45.125.103/LjEZs/uYtea.x86
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 141.11.167.243'
+id: 0e7fde58-bbb4-4763-88e6-d71c68ebb5fd
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://141.11.167.243/huhu/titanjr.arm7'
+references:
+- https://urlhaus.abuse.ch/url/141.11.167.243/huhu/titanjr.arm7/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://141.11.167.243/huhu/titanjr.arm7
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

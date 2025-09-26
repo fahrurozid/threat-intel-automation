@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 209.54.102.90'
+id: 1bd19501-ae83-4b15-873c-8f0b6bcd5bf9
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://209.54.102.90/25/IMAGES___0049599696969969699EEEEE.hta'
+references:
+- https://urlhaus.abuse.ch/url/209.54.102.90/25/IMAGES___0049599696969969699EEEEE.hta/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://209.54.102.90/25/IMAGES___0049599696969969699EEEEE.hta
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

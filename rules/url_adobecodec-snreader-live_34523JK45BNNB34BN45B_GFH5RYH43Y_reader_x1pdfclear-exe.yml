@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: adobecodec.snreader.live'
+id: 8d17a495-e129-4d2d-8ecb-4eda244d6249
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://adobecodec.snreader.live/34523JK45BNNB34BN45B/GFH5RYH43Y/reader_x1pdfclear.exe'
+references:
+- https://urlhaus.abuse.ch/url/adobecodec.snreader.live/34523JK45BNNB34BN45B/GFH5RYH43Y/reader_x1pdfclear.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://adobecodec.snreader.live/34523JK45BNNB34BN45B/GFH5RYH43Y/reader_x1pdfclear.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

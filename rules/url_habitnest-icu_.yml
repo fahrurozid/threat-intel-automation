@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: habitnest.icu'
+id: fcd1782e-427d-4a56-a085-b23cc6891ec0
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://habitnest.icu/'
+references:
+- https://urlhaus.abuse.ch/url/habitnest.icu//
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://habitnest.icu/
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

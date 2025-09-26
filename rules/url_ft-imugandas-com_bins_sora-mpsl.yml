@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: ft.imugandas.com'
+id: c984890a-01d7-4a01-a8ff-9ae422cebafd
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://ft.imugandas.com/bins/sora.mpsl'
+references:
+- https://urlhaus.abuse.ch/url/ft.imugandas.com/bins/sora.mpsl/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://ft.imugandas.com/bins/sora.mpsl
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

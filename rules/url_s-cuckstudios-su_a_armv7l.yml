@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: s.cuckstudios.su'
+id: 78e1ceb3-7a2e-4df3-a5f1-947691da9c13
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://s.cuckstudios.su/a/armv7l'
+references:
+- https://urlhaus.abuse.ch/url/s.cuckstudios.su/a/armv7l/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://s.cuckstudios.su/a/armv7l
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

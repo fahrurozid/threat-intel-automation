@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: y.cdn-325.ru'
+id: 5730e432-eb9e-4bbb-9d79-b2366fb2a5e1
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://y.cdn-325.ru/b9c3huytqa.sh'
+references:
+- https://urlhaus.abuse.ch/url/y.cdn-325.ru/b9c3huytqa.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://y.cdn-325.ru/b9c3huytqa.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

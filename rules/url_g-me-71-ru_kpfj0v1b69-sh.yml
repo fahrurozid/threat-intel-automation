@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: g.me-71.ru'
+id: f8c2c2ac-d186-48c7-a196-d35fcfe66359
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://g.me-71.ru/kpfj0v1b69.sh'
+references:
+- https://urlhaus.abuse.ch/url/g.me-71.ru/kpfj0v1b69.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://g.me-71.ru/kpfj0v1b69.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

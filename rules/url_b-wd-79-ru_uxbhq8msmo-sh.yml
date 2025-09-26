@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: b.wd-79.ru'
+id: 17ef6f54-704a-4955-8a97-ff19cb1cf8aa
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://b.wd-79.ru/uxbhq8msmo.sh'
+references:
+- https://urlhaus.abuse.ch/url/b.wd-79.ru/uxbhq8msmo.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://b.wd-79.ru/uxbhq8msmo.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: b9c.340-k.ru'
+id: 041cd214-6bc4-4792-aa27-6f18555f3067
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://b9c.340-k.ru/u1ecd9tedq.f4v'
+references:
+- https://urlhaus.abuse.ch/url/b9c.340-k.ru/u1ecd9tedq.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://b9c.340-k.ru/u1ecd9tedq.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: r.h-18.ru'
+id: 06b73eca-8b16-482f-8edb-091c4522189d
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://r.h-18.ru/0zff9pw97b.webm'
+references:
+- https://urlhaus.abuse.ch/url/r.h-18.ru/0zff9pw97b.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://r.h-18.ru/0zff9pw97b.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

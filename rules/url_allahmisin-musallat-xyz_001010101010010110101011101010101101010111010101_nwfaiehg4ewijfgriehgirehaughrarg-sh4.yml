@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: allahmisin.musallat.xyz'
+id: 7936627c-874a-4627-82f6-a83c8d691521
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://allahmisin.musallat.xyz/001010101010010110101011101010101101010111010101/nwfaiehg4ewijfgriehgirehaughrarg.sh4'
+references:
+- https://urlhaus.abuse.ch/url/allahmisin.musallat.xyz/001010101010010110101011101010101101010111010101/nwfaiehg4ewijfgriehgirehaughrarg.sh4/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://allahmisin.musallat.xyz/001010101010010110101011101010101101010111010101/nwfaiehg4ewijfgriehgirehaughrarg.sh4
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

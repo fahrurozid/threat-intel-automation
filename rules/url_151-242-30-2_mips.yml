@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 151.242.30.2'
+id: 28b77551-5f1f-4fc8-91ef-9f04dc81290e
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://151.242.30.2/mips'
+references:
+- https://urlhaus.abuse.ch/url/151.242.30.2/mips/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://151.242.30.2/mips
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

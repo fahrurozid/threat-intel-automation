@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 91.80.167.17'
+id: 2640399e-9b59-4e0e-a263-ba11a6ffb0e5
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://91.80.167.17/sshd'
+references:
+- https://urlhaus.abuse.ch/url/91.80.167.17/sshd/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://91.80.167.17/sshd
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

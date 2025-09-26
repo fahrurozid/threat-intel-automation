@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: e1.ja-02.ru'
+id: bab8e58a-a00f-4ec5-8985-aae8ec3249b1
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://e1.ja-02.ru/e2iyhx1tho.sh'
+references:
+- https://urlhaus.abuse.ch/url/e1.ja-02.ru/e2iyhx1tho.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://e1.ja-02.ru/e2iyhx1tho.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

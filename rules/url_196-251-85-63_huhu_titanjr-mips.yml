@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 196.251.85.63'
+id: 409cccc5-c706-48a7-b42f-141078841141
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://196.251.85.63/huhu/titanjr.mips'
+references:
+- https://urlhaus.abuse.ch/url/196.251.85.63/huhu/titanjr.mips/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://196.251.85.63/huhu/titanjr.mips
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

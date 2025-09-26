@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: m2.391-g.ru'
+id: 3f2fb09a-fe2f-4972-9a0e-13276ace5b89
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://m2.391-g.ru/34zz2g06jy.f4v'
+references:
+- https://urlhaus.abuse.ch/url/m2.391-g.ru/34zz2g06jy.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://m2.391-g.ru/34zz2g06jy.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

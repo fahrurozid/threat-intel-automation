@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: r.cdn-626.ru'
+id: d179ce69-ce81-4204-9c4e-c518e5dbef0c
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://r.cdn-626.ru/vuqwvkchps.sh'
+references:
+- https://urlhaus.abuse.ch/url/r.cdn-626.ru/vuqwvkchps.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://r.cdn-626.ru/vuqwvkchps.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

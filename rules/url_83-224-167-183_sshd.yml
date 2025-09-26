@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 83.224.167.183'
+id: 74c9b70c-79be-4b64-9394-b7c8f1264e2e
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://83.224.167.183/sshd'
+references:
+- https://urlhaus.abuse.ch/url/83.224.167.183/sshd/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://83.224.167.183/sshd
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

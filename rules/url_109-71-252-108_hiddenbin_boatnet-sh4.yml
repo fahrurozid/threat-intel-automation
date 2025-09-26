@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 109.71.252.108'
+id: 7ddebf03-7957-439a-ae47-05335d8b2171
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://109.71.252.108/hiddenbin/boatnet.sh4'
+references:
+- https://urlhaus.abuse.ch/url/109.71.252.108/hiddenbin/boatnet.sh4/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://109.71.252.108/hiddenbin/boatnet.sh4
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

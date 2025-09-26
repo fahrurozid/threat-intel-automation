@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: x.k987.ru'
+id: 2e8acd83-c327-4258-87a5-0b16320ef76a
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://x.k987.ru/i80biaiu6a.f4v'
+references:
+- https://urlhaus.abuse.ch/url/x.k987.ru/i80biaiu6a.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://x.k987.ru/i80biaiu6a.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

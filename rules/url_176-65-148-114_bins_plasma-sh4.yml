@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 176.65.148.114'
+id: 2f2da969-8691-4e9b-af4f-ada7888f8aba
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://176.65.148.114/bins/plasma.sh4'
+references:
+- https://urlhaus.abuse.ch/url/176.65.148.114/bins/plasma.sh4/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://176.65.148.114/bins/plasma.sh4
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

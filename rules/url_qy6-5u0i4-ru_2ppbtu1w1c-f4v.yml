@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: qy6.5u0i4.ru'
+id: 074f9c79-d9ce-4e76-bc81-5f4f716d95fa
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://qy6.5u0i4.ru/2ppbtu1w1c.f4v'
+references:
+- https://urlhaus.abuse.ch/url/qy6.5u0i4.ru/2ppbtu1w1c.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://qy6.5u0i4.ru/2ppbtu1w1c.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

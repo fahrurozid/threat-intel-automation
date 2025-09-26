@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: m3.ny-54.ru'
+id: eb1efdb8-b698-4db4-82bd-5e9298e88d2f
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://m3.ny-54.ru/uo1erkj6d4.sh'
+references:
+- https://urlhaus.abuse.ch/url/m3.ny-54.ru/uo1erkj6d4.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://m3.ny-54.ru/uo1erkj6d4.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: x.cdn-175.ru'
+id: a3a13e75-be28-451f-9451-d7209803973f
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://x.cdn-175.ru/7zhqvjkc0f.sh'
+references:
+- https://urlhaus.abuse.ch/url/x.cdn-175.ru/7zhqvjkc0f.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://x.cdn-175.ru/7zhqvjkc0f.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 103.118.28.144'
+id: e3369747-24df-4552-b3d9-c9c1575b2de2
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://103.118.28.144/hidakibest.arm4'
+references:
+- https://urlhaus.abuse.ch/url/103.118.28.144/hidakibest.arm4/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://103.118.28.144/hidakibest.arm4
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

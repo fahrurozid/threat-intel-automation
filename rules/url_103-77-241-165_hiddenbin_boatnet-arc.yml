@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 103.77.241.165'
+id: 8cc47bb1-a131-4c79-85ca-f68f448202f4
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://103.77.241.165/hiddenbin/boatnet.arc'
+references:
+- https://urlhaus.abuse.ch/url/103.77.241.165/hiddenbin/boatnet.arc/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://103.77.241.165/hiddenbin/boatnet.arc
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

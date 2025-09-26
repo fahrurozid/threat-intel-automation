@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: tehrancraftst.ir'
+id: 9a520b16-58bb-465c-8283-1289c0ed0de7
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://tehrancraftst.ir/1.sh'
+references:
+- https://urlhaus.abuse.ch/url/tehrancraftst.ir/1.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://tehrancraftst.ir/1.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

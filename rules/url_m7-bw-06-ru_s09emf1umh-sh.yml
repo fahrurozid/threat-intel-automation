@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: m7.bw-06.ru'
+id: f401aa8d-d664-46f2-b19f-423c268fd27f
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://m7.bw-06.ru/s09emf1umh.sh'
+references:
+- https://urlhaus.abuse.ch/url/m7.bw-06.ru/s09emf1umh.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://m7.bw-06.ru/s09emf1umh.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

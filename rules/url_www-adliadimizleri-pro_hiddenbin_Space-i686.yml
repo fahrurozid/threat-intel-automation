@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: www.adliadimizleri.pro'
+id: efe97501-de76-4e3c-9dfe-a6a1f74824a1
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://www.adliadimizleri.pro/hiddenbin/Space.i686'
+references:
+- https://urlhaus.abuse.ch/url/www.adliadimizleri.pro/hiddenbin/Space.i686/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://www.adliadimizleri.pro/hiddenbin/Space.i686
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

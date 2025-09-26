@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: github.com'
+id: 87a057d1-3827-4ac9-a22e-283b63f8f2f9
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://github.com/ellerysy/bss/raw/refs/heads/main/main8.exe'
+references:
+- https://urlhaus.abuse.ch/url/github.com/ellerysy/bss/raw/refs/heads/main/main8.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://github.com/ellerysy/bss/raw/refs/heads/main/main8.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

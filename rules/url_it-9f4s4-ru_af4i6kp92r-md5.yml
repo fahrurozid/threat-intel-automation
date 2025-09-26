@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: it.9f4s4.ru'
+id: 4f7d1aef-2e1f-4034-8e28-ef1ae0bb3c9c
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://it.9f4s4.ru/af4i6kp92r.md5'
+references:
+- https://urlhaus.abuse.ch/url/it.9f4s4.ru/af4i6kp92r.md5/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://it.9f4s4.ru/af4i6kp92r.md5
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 172.245.209.203'
+id: 4e72b251-fc28-4ac2-a1c3-1e74ba6c5595
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://172.245.209.203/img/kbnc/IMAGES____09494000000034004050066070707070.hta'
+references:
+- https://urlhaus.abuse.ch/url/172.245.209.203/img/kbnc/IMAGES____09494000000034004050066070707070.hta/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://172.245.209.203/img/kbnc/IMAGES____09494000000034004050066070707070.hta
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

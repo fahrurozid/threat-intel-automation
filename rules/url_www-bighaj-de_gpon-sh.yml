@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: www.bighaj.de'
+id: 9ff28b6b-6572-4d0b-854b-d2a5e3314759
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://www.bighaj.de/gpon.sh'
+references:
+- https://urlhaus.abuse.ch/url/www.bighaj.de/gpon.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://www.bighaj.de/gpon.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

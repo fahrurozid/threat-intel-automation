@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: aa9.me-71.ru'
+id: 3d81df0b-8b48-4d27-ab61-ff4e416f6b62
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://aa9.me-71.ru/6n8zqrx7ja.sh'
+references:
+- https://urlhaus.abuse.ch/url/aa9.me-71.ru/6n8zqrx7ja.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://aa9.me-71.ru/6n8zqrx7ja.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

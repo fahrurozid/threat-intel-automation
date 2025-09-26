@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: wlnrar.shop'
+id: 31a1806f-cbd5-4644-9155-f6d050d9545d
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://wlnrar.shop/download/Edge.exe'
+references:
+- https://urlhaus.abuse.ch/url/wlnrar.shop/download/Edge.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://wlnrar.shop/download/Edge.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

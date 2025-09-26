@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 4.201.106.183'
+id: 06dd52ff-4e5c-4342-b166-70937af62eab
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://4.201.106.183/02.08.2022.exe'
+references:
+- https://urlhaus.abuse.ch/url/4.201.106.183/02.08.2022.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://4.201.106.183/02.08.2022.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

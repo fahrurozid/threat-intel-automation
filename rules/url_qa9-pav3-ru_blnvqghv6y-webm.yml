@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: qa9.pav3.ru'
+id: ba96109d-e5d2-4357-8928-31e81903ce29
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://qa9.pav3.ru/blnvqghv6y.webm'
+references:
+- https://urlhaus.abuse.ch/url/qa9.pav3.ru/blnvqghv6y.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://qa9.pav3.ru/blnvqghv6y.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

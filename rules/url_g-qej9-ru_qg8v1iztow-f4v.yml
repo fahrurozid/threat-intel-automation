@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: g.qej9.ru'
+id: 550a095b-4dbb-4c31-8771-5a15d04a1169
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://g.qej9.ru/qg8v1iztow.f4v'
+references:
+- https://urlhaus.abuse.ch/url/g.qej9.ru/qg8v1iztow.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://g.qej9.ru/qg8v1iztow.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

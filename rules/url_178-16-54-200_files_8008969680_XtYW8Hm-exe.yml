@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 178.16.54.200'
+id: a831068f-5de1-49f0-af38-66bb0a2c2540
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://178.16.54.200/files/8008969680/XtYW8Hm.exe'
+references:
+- https://urlhaus.abuse.ch/url/178.16.54.200/files/8008969680/XtYW8Hm.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://178.16.54.200/files/8008969680/XtYW8Hm.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: mthreebm.gt.tc'
+id: 5bd66aba-2e75-4cda-a817-5b9673ffa1e1
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://mthreebm.gt.tc/arquivo_20250917192237.txt'
+references:
+- https://urlhaus.abuse.ch/url/mthreebm.gt.tc/arquivo_20250917192237.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://mthreebm.gt.tc/arquivo_20250917192237.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

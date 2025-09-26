@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: github.com'
+id: 87e4e7e6-6424-4235-9fc2-1f438d244b5b
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://github.com/cakesdamager2000c8p/Bypass-Hwid-Spoofer/releases/download/pfl3nu40zq/Setup.2.1.8.zip'
+references:
+- https://urlhaus.abuse.ch/url/github.com/cakesdamager2000c8p/Bypass-Hwid-Spoofer/releases/download/pfl3nu40zq/Setup.2.1.8.zip/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://github.com/cakesdamager2000c8p/Bypass-Hwid-Spoofer/releases/download/pfl3nu40zq/Setup.2.1.8.zip
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

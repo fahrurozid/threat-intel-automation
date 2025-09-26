@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: m7.mo-49.ru'
+id: 281055e7-e503-42e9-9213-5c8ace9d1c36
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://m7.mo-49.ru/ekny0l47n0.sh'
+references:
+- https://urlhaus.abuse.ch/url/m7.mo-49.ru/ekny0l47n0.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://m7.mo-49.ru/ekny0l47n0.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

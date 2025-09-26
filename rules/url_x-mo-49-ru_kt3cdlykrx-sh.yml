@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: x.mo-49.ru'
+id: d8847a12-4610-423a-824e-6e934248da30
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://x.mo-49.ru/kt3cdlykrx.sh'
+references:
+- https://urlhaus.abuse.ch/url/x.mo-49.ru/kt3cdlykrx.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://x.mo-49.ru/kt3cdlykrx.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

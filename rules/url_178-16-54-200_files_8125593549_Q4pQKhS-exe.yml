@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 178.16.54.200'
+id: a50c2403-655d-4ea4-8271-1017ca7e8079
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://178.16.54.200/files/8125593549/Q4pQKhS.exe'
+references:
+- https://urlhaus.abuse.ch/url/178.16.54.200/files/8125593549/Q4pQKhS.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://178.16.54.200/files/8125593549/Q4pQKhS.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

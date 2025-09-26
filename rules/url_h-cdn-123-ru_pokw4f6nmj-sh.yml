@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: h.cdn-123.ru'
+id: a29171aa-03aa-4929-ac60-4cf82228d397
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://h.cdn-123.ru/pokw4f6nmj.sh'
+references:
+- https://urlhaus.abuse.ch/url/h.cdn-123.ru/pokw4f6nmj.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://h.cdn-123.ru/pokw4f6nmj.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

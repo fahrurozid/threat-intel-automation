@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: sfarleaza2.infinityfreeapp.com'
+id: 3a5134e1-14cd-4ea5-967c-50750d46150b
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://sfarleaza2.infinityfreeapp.com/arquivo_20250924223642.txt'
+references:
+- https://urlhaus.abuse.ch/url/sfarleaza2.infinityfreeapp.com/arquivo_20250924223642.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://sfarleaza2.infinityfreeapp.com/arquivo_20250924223642.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

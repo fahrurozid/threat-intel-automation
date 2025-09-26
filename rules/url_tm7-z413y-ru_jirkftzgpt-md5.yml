@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: tm7.z413y.ru'
+id: 4b679c39-231d-483c-ac97-48a5718b9ede
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://tm7.z413y.ru/jirkftzgpt.md5'
+references:
+- https://urlhaus.abuse.ch/url/tm7.z413y.ru/jirkftzgpt.md5/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://tm7.z413y.ru/jirkftzgpt.md5
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

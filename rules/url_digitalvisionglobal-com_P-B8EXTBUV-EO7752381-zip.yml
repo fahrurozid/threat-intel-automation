@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: digitalvisionglobal.com'
+id: bcbb2464-c9ed-41a4-9ad1-1ad8549f0018
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://digitalvisionglobal.com/P-B8EXTBUV-EO7752381.zip'
+references:
+- https://urlhaus.abuse.ch/url/digitalvisionglobal.com/P-B8EXTBUV-EO7752381.zip/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://digitalvisionglobal.com/P-B8EXTBUV-EO7752381.zip
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

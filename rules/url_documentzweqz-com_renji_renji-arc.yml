@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: documentzweqz.com'
+id: 39400957-4509-4056-ad9b-a63f03bf991c
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://documentzweqz.com/renji/renji.arc'
+references:
+- https://urlhaus.abuse.ch/url/documentzweqz.com/renji/renji.arc/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://documentzweqz.com/renji/renji.arc
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

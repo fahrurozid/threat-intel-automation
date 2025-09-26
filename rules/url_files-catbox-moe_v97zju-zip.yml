@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: files.catbox.moe'
+id: f7751e9b-8657-4a38-9512-808324bad5b4
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://files.catbox.moe/v97zju.zip'
+references:
+- https://urlhaus.abuse.ch/url/files.catbox.moe/v97zju.zip/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://files.catbox.moe/v97zju.zip
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: u1.cdn-123.ru'
+id: 832e06c1-3bf5-443f-9639-20237bf8ef1b
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://u1.cdn-123.ru/jbono3se5h.sh'
+references:
+- https://urlhaus.abuse.ch/url/u1.cdn-123.ru/jbono3se5h.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://u1.cdn-123.ru/jbono3se5h.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

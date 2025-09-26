@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: qz7.391-g.ru'
+id: 5c03c415-79c6-4c8e-9c7c-2e0842c0d864
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://qz7.391-g.ru/5lc2mxgcjw.f4v'
+references:
+- https://urlhaus.abuse.ch/url/qz7.391-g.ru/5lc2mxgcjw.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://qz7.391-g.ru/5lc2mxgcjw.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

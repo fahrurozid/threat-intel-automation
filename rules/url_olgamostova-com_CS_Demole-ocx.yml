@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: olgamostova.com'
+id: c3735d7e-3dab-446b-b993-28dc8013e689
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://olgamostova.com/CS/Demole.ocx'
+references:
+- https://urlhaus.abuse.ch/url/olgamostova.com/CS/Demole.ocx/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://olgamostova.com/CS/Demole.ocx
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: cm0.s57o.ru'
+id: 24e1d660-12eb-4d7e-b314-a8652c4a2919
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://cm0.s57o.ru/d7wq6h5mx1.webm'
+references:
+- https://urlhaus.abuse.ch/url/cm0.s57o.ru/d7wq6h5mx1.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://cm0.s57o.ru/d7wq6h5mx1.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

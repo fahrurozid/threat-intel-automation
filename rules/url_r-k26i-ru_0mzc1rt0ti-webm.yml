@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: r.k26i.ru'
+id: 8905b244-c7ea-4cab-87c6-1207bc1b2884
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://r.k26i.ru/0mzc1rt0ti.webm'
+references:
+- https://urlhaus.abuse.ch/url/r.k26i.ru/0mzc1rt0ti.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://r.k26i.ru/0mzc1rt0ti.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

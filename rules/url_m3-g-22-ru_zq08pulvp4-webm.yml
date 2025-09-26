@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: m3.g-22.ru'
+id: b9ca6720-0cc4-4a71-819f-f3c14d25c825
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://m3.g-22.ru/zq08pulvp4.webm'
+references:
+- https://urlhaus.abuse.ch/url/m3.g-22.ru/zq08pulvp4.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://m3.g-22.ru/zq08pulvp4.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: r.4m99.ru'
+id: 8ba04102-58de-4ce6-9ed9-f84089354e77
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://r.4m99.ru/s7t5rbl1cg.f4v'
+references:
+- https://urlhaus.abuse.ch/url/r.4m99.ru/s7t5rbl1cg.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://r.4m99.ru/s7t5rbl1cg.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

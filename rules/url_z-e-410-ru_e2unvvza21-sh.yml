@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: z.e-410.ru'
+id: 1cd16cdf-6e5f-4c1f-887e-47e0fbfe1464
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://z.e-410.ru/e2unvvza21.sh'
+references:
+- https://urlhaus.abuse.ch/url/z.e-410.ru/e2unvvza21.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://z.e-410.ru/e2unvvza21.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

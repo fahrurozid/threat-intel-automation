@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: n.t940.ru'
+id: a26d3669-0ce7-489e-9721-28bfb3899b44
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://n.t940.ru/ht25m48a37.f4v'
+references:
+- https://urlhaus.abuse.ch/url/n.t940.ru/ht25m48a37.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://n.t940.ru/ht25m48a37.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

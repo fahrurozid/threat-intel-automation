@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 84.38.134.109'
+id: ac01b8f5-a07b-4132-95cb-240fdb9eaa57
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://84.38.134.109/IMG/kmn/Images__09930943090439000000000004939EEEEEE.hta'
+references:
+- https://urlhaus.abuse.ch/url/84.38.134.109/IMG/kmn/Images__09930943090439000000000004939EEEEEE.hta/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://84.38.134.109/IMG/kmn/Images__09930943090439000000000004939EEEEEE.hta
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: awesome-cartwright.172-86-92-103.plesk.page'
+id: 77806b1c-7ed2-4f24-9ed2-1d4603fcf6ba
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://awesome-cartwright.172-86-92-103.plesk.page/a-r.m-6.SNOOPY'
+references:
+- https://urlhaus.abuse.ch/url/awesome-cartwright.172-86-92-103.plesk.page/a-r.m-6.SNOOPY/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://awesome-cartwright.172-86-92-103.plesk.page/a-r.m-6.SNOOPY
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

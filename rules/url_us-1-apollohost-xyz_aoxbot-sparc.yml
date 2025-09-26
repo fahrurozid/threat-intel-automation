@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: us-1.apollohost.xyz'
+id: 75d0b2b7-2e03-4d85-849b-dfe6c58f827f
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://us-1.apollohost.xyz/aoxbot.sparc'
+references:
+- https://urlhaus.abuse.ch/url/us-1.apollohost.xyz/aoxbot.sparc/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://us-1.apollohost.xyz/aoxbot.sparc
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

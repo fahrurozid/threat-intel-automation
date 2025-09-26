@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: wq9.n-585.ru'
+id: 145cf546-2145-487d-9208-f5bc0160c21d
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://wq9.n-585.ru/be0e44s67u.sh'
+references:
+- https://urlhaus.abuse.ch/url/wq9.n-585.ru/be0e44s67u.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://wq9.n-585.ru/be0e44s67u.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: lst.n50e.ru'
+id: cddcd54c-58de-4f04-90b0-d73a77155c53
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://lst.n50e.ru/cdg20bhxsm.webm'
+references:
+- https://urlhaus.abuse.ch/url/lst.n50e.ru/cdg20bhxsm.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://lst.n50e.ru/cdg20bhxsm.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: d.e-134.ru'
+id: 70f796f5-6f9d-4e78-bde5-de65b0864615
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://d.e-134.ru/e0p9lfjra0.sh'
+references:
+- https://urlhaus.abuse.ch/url/d.e-134.ru/e0p9lfjra0.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://d.e-134.ru/e0p9lfjra0.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

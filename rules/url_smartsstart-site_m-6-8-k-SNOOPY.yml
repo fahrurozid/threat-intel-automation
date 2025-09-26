@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: smartsstart.site'
+id: 521e2853-9864-4f6c-a799-3e0b6404510c
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://smartsstart.site/m-6.8-k.SNOOPY'
+references:
+- https://urlhaus.abuse.ch/url/smartsstart.site/m-6.8-k.SNOOPY/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://smartsstart.site/m-6.8-k.SNOOPY
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

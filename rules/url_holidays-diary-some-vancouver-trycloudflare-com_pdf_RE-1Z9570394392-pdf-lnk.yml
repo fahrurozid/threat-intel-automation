@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: holidays-diary-some-vancouver.trycloudflare.com'
+id: d1fe57ad-63ec-419c-a39d-a9d6e21075a3
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://holidays-diary-some-vancouver.trycloudflare.com/pdf/RE-1Z9570394392.pdf.lnk'
+references:
+- https://urlhaus.abuse.ch/url/holidays-diary-some-vancouver.trycloudflare.com/pdf/RE-1Z9570394392.pdf.lnk/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://holidays-diary-some-vancouver.trycloudflare.com/pdf/RE-1Z9570394392.pdf.lnk
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

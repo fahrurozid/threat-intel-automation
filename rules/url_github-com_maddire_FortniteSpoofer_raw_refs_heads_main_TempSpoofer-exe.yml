@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: github.com'
+id: a8308937-db59-46c9-a054-c8f79df92774
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://github.com/maddire/FortniteSpoofer/raw/refs/heads/main/TempSpoofer.exe'
+references:
+- https://urlhaus.abuse.ch/url/github.com/maddire/FortniteSpoofer/raw/refs/heads/main/TempSpoofer.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://github.com/maddire/FortniteSpoofer/raw/refs/heads/main/TempSpoofer.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: mvnruskg.info'
+id: 364e6f7c-3b10-4562-94ab-3ea6f54711d6
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://mvnruskg.info/'
+references:
+- https://urlhaus.abuse.ch/url/mvnruskg.info//
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://mvnruskg.info/
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

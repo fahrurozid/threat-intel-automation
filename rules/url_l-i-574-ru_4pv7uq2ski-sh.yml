@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: l.i-574.ru'
+id: 8b631505-c73f-4533-8cfe-7af664824089
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://l.i-574.ru/4pv7uq2ski.sh'
+references:
+- https://urlhaus.abuse.ch/url/l.i-574.ru/4pv7uq2ski.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://l.i-574.ru/4pv7uq2ski.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

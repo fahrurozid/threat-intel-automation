@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: wsbcard.s3.dualstack.us-east-1.amazonaws.com'
+id: 43188bfb-580d-4680-96eb-92d0c284b581
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://wsbcard.s3.dualstack.us-east-1.amazonaws.com/test/2557.KV6-TTKQ.zip'
+references:
+- https://urlhaus.abuse.ch/url/wsbcard.s3.dualstack.us-east-1.amazonaws.com/test/2557.KV6-TTKQ.zip/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://wsbcard.s3.dualstack.us-east-1.amazonaws.com/test/2557.KV6-TTKQ.zip
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: bighaj.de'
+id: c85f198c-451a-4fed-b92a-f0d49d524b21
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://bighaj.de/netgear'
+references:
+- https://urlhaus.abuse.ch/url/bighaj.de/netgear/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://bighaj.de/netgear
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: l.v51o.ru'
+id: de7ec68a-141e-432e-b6e0-4e39b287f2d6
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://l.v51o.ru/8v8mb5edy8.webm'
+references:
+- https://urlhaus.abuse.ch/url/l.v51o.ru/8v8mb5edy8.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://l.v51o.ru/8v8mb5edy8.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

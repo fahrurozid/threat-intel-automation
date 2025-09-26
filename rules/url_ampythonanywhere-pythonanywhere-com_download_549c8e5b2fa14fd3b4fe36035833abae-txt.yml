@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: ampythonanywhere.pythonanywhere.com'
+id: 3df8f72b-d347-4287-8515-d6cc54f2651e
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://ampythonanywhere.pythonanywhere.com/download/549c8e5b2fa14fd3b4fe36035833abae.txt'
+references:
+- https://urlhaus.abuse.ch/url/ampythonanywhere.pythonanywhere.com/download/549c8e5b2fa14fd3b4fe36035833abae.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://ampythonanywhere.pythonanywhere.com/download/549c8e5b2fa14fd3b4fe36035833abae.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

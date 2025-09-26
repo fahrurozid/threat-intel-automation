@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: ft.imugandas.com'
+id: 2ffb9ad7-9323-45b4-a782-a4b7b263359a
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://ft.imugandas.com/d/xd.ppc'
+references:
+- https://urlhaus.abuse.ch/url/ft.imugandas.com/d/xd.ppc/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://ft.imugandas.com/d/xd.ppc
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

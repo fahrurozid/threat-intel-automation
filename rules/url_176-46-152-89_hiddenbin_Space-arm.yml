@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 176.46.152.89'
+id: 5efbfaf0-e8d9-4dd9-9d38-43ca9992b363
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://176.46.152.89/hiddenbin/Space.arm'
+references:
+- https://urlhaus.abuse.ch/url/176.46.152.89/hiddenbin/Space.arm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://176.46.152.89/hiddenbin/Space.arm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

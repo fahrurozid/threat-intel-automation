@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: k.juq0.ru'
+id: ffe94bd6-d951-47fd-a247-4cfdd9c54a93
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://k.juq0.ru/pifhxc19jz.webm'
+references:
+- https://urlhaus.abuse.ch/url/k.juq0.ru/pifhxc19jz.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://k.juq0.ru/pifhxc19jz.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

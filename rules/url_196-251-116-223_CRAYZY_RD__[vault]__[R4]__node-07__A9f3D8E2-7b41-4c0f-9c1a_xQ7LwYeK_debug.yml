@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 196.251.116.223'
+id: 9a836aa3-79e4-45d7-bd69-0978bb40ab7d
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://196.251.116.223/CRAYZY_RD__[vault]__[R4]__node-07__A9f3D8E2-7b41-4c0f-9c1a_xQ7LwYeK/debug'
+references:
+- https://urlhaus.abuse.ch/url/196.251.116.223/CRAYZY_RD__[vault]__[R4]__node-07__A9f3D8E2-7b41-4c0f-9c1a_xQ7LwYeK/debug/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://196.251.116.223/CRAYZY_RD__[vault]__[R4]__node-07__A9f3D8E2-7b41-4c0f-9c1a_xQ7LwYeK/debug
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

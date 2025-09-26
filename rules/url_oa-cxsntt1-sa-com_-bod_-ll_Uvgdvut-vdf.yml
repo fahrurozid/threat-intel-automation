@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: oa.cxsntt1.sa.com'
+id: 890d9050-b713-4d59-863d-2c0cf9d25a7f
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://oa.cxsntt1.sa.com/.bod/.ll/Uvgdvut.vdf'
+references:
+- https://urlhaus.abuse.ch/url/oa.cxsntt1.sa.com/.bod/.ll/Uvgdvut.vdf/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://oa.cxsntt1.sa.com/.bod/.ll/Uvgdvut.vdf
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

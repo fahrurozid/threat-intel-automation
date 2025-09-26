@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: t.k002.ru'
+id: ede9913d-3caf-46b7-a5e7-519bb2d58839
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://t.k002.ru/3p5l9zvmf7.webm'
+references:
+- https://urlhaus.abuse.ch/url/t.k002.ru/3p5l9zvmf7.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://t.k002.ru/3p5l9zvmf7.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

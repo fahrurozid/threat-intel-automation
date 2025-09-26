@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 158.94.208.102'
+id: e0c5e82f-17c5-47a8-b534-964b0a6cc161
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://158.94.208.102/a.exe'
+references:
+- https://urlhaus.abuse.ch/url/158.94.208.102/a.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://158.94.208.102/a.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

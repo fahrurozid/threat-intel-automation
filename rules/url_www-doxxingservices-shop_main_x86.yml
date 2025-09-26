@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: www.doxxingservices.shop'
+id: 932f79e1-9575-479e-b9b8-ed3ce33ae00b
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://www.doxxingservices.shop/main_x86'
+references:
+- https://urlhaus.abuse.ch/url/www.doxxingservices.shop/main_x86/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://www.doxxingservices.shop/main_x86
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

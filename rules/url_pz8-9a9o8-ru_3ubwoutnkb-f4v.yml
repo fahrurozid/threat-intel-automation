@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: pz8.9a9o8.ru'
+id: 0b6b8006-dea3-45ed-a200-cb75fef027c7
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://pz8.9a9o8.ru/3ubwoutnkb.f4v'
+references:
+- https://urlhaus.abuse.ch/url/pz8.9a9o8.ru/3ubwoutnkb.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://pz8.9a9o8.ru/3ubwoutnkb.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

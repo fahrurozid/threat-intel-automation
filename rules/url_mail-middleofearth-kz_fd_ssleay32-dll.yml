@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: mail.middleofearth.kz'
+id: b131f9e3-2f69-446d-9c28-c44d9e8df0e1
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://mail.middleofearth.kz/fd/ssleay32.dll'
+references:
+- https://urlhaus.abuse.ch/url/mail.middleofearth.kz/fd/ssleay32.dll/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://mail.middleofearth.kz/fd/ssleay32.dll
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 82.147.85.212'
+id: 2df34e63-d433-4b8e-8974-034277fc6202
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://82.147.85.212/gpon443'
+references:
+- https://urlhaus.abuse.ch/url/82.147.85.212/gpon443/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://82.147.85.212/gpon443
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

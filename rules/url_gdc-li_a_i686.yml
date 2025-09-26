@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: gdc.li'
+id: 1b179827-a5cf-46f0-a77f-25423a392e26
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://gdc.li/a/i686'
+references:
+- https://urlhaus.abuse.ch/url/gdc.li/a/i686/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://gdc.li/a/i686
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

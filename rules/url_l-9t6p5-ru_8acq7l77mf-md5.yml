@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: l.9t6p5.ru'
+id: 72ec41ae-7089-4171-bee0-ff1b76e93cdc
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://l.9t6p5.ru/8acq7l77mf.md5'
+references:
+- https://urlhaus.abuse.ch/url/l.9t6p5.ru/8acq7l77mf.md5/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://l.9t6p5.ru/8acq7l77mf.md5
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 72.60.108.185'
+id: 8ebb06da-e732-401a-9766-31e3b3d47f82
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://72.60.108.185/00101010101001/morte.i468'
+references:
+- https://urlhaus.abuse.ch/url/72.60.108.185/00101010101001/morte.i468/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://72.60.108.185/00101010101001/morte.i468
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

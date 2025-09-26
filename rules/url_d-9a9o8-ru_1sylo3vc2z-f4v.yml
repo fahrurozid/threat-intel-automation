@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: d.9a9o8.ru'
+id: a81c92a4-a24b-441b-adf2-cd3c5c80ef86
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://d.9a9o8.ru/1sylo3vc2z.f4v'
+references:
+- https://urlhaus.abuse.ch/url/d.9a9o8.ru/1sylo3vc2z.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://d.9a9o8.ru/1sylo3vc2z.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

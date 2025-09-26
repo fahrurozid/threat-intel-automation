@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: md.jaxusoo.ru'
+id: a7ef7643-6efc-46c6-a3dd-e8f5759198ae
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://md.jaxusoo.ru/2dc065f62ee8774c2517bf4c4d2c1211'
+references:
+- https://urlhaus.abuse.ch/url/md.jaxusoo.ru/2dc065f62ee8774c2517bf4c4d2c1211/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://md.jaxusoo.ru/2dc065f62ee8774c2517bf4c4d2c1211
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

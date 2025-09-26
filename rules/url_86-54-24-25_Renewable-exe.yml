@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 86.54.24.25'
+id: 1f7e7d96-158a-47de-ae72-b5825d02c33c
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://86.54.24.25/Renewable.exe'
+references:
+- https://urlhaus.abuse.ch/url/86.54.24.25/Renewable.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://86.54.24.25/Renewable.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: x8.z413y.ru'
+id: 372163ef-2a21-4372-91a0-d17fa20d887f
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://x8.z413y.ru/06qcg88axj.md5'
+references:
+- https://urlhaus.abuse.ch/url/x8.z413y.ru/06qcg88axj.md5/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://x8.z413y.ru/06qcg88axj.md5
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

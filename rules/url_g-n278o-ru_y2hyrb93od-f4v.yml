@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: g.n278o.ru'
+id: 44989d92-632a-4a3e-9c9a-ea3b0b73ba24
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://g.n278o.ru/y2hyrb93od.f4v'
+references:
+- https://urlhaus.abuse.ch/url/g.n278o.ru/y2hyrb93od.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://g.n278o.ru/y2hyrb93od.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

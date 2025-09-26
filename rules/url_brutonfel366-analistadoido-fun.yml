@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: brutonfel366.analistadoido.fun'
+id: fc0215c1-68e9-4fc2-9f40-02e48d1775e0
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://brutonfel366.analistadoido.fun'
+references:
+- https://urlhaus.abuse.ch/url/brutonfel366.analistadoido.fun/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://brutonfel366.analistadoido.fun
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

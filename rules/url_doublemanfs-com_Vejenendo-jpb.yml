@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: doublemanfs.com'
+id: 06bd8bf7-2df1-45d8-9152-9dc90c4b58e6
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://doublemanfs.com/Vejenendo.jpb'
+references:
+- https://urlhaus.abuse.ch/url/doublemanfs.com/Vejenendo.jpb/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://doublemanfs.com/Vejenendo.jpb
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

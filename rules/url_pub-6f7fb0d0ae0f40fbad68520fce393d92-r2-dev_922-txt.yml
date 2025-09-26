@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: pub-6f7fb0d0ae0f40fbad68520fce393d92.r2.dev'
+id: 4355681c-1a81-4e74-b391-8828cb75af05
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://pub-6f7fb0d0ae0f40fbad68520fce393d92.r2.dev/922.txt'
+references:
+- https://urlhaus.abuse.ch/url/pub-6f7fb0d0ae0f40fbad68520fce393d92.r2.dev/922.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://pub-6f7fb0d0ae0f40fbad68520fce393d92.r2.dev/922.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

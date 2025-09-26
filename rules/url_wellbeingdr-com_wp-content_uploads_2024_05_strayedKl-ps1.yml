@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: wellbeingdr.com'
+id: 4d2de89a-9dad-4c63-9825-7c84efa912f3
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://wellbeingdr.com/wp-content/uploads/2024/05/strayedKl.ps1'
+references:
+- https://urlhaus.abuse.ch/url/wellbeingdr.com/wp-content/uploads/2024/05/strayedKl.ps1/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://wellbeingdr.com/wp-content/uploads/2024/05/strayedKl.ps1
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: kind-wu.144-172-73-14.plesk.page'
+id: 6314655c-817a-4760-a88d-9edba3785038
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://kind-wu.144-172-73-14.plesk.page/armv7l'
+references:
+- https://urlhaus.abuse.ch/url/kind-wu.144-172-73-14.plesk.page/armv7l/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://kind-wu.144-172-73-14.plesk.page/armv7l
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

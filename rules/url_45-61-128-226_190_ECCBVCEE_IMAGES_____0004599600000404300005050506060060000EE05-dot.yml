@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 45.61.128.226'
+id: 5265c29a-1548-4312-9b4b-5f7e2db5dfde
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://45.61.128.226/190/ECCBVCEE/IMAGES_____0004599600000404300005050506060060000EE05.dot'
+references:
+- https://urlhaus.abuse.ch/url/45.61.128.226/190/ECCBVCEE/IMAGES_____0004599600000404300005050506060060000EE05.dot/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://45.61.128.226/190/ECCBVCEE/IMAGES_____0004599600000404300005050506060060000EE05.dot
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 121.127.34.118'
+id: 59f2fe07-810a-4184-b8de-26df4e5511a0
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://121.127.34.118/huhu/titanjr.sh4'
+references:
+- https://urlhaus.abuse.ch/url/121.127.34.118/huhu/titanjr.sh4/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://121.127.34.118/huhu/titanjr.sh4
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

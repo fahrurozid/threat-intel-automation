@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 147.45.125.103'
+id: f70ca87c-0745-4483-bd60-b069d89e9837
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://147.45.125.103/lmaoWTF/loligang.mpsl'
+references:
+- https://urlhaus.abuse.ch/url/147.45.125.103/lmaoWTF/loligang.mpsl/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://147.45.125.103/lmaoWTF/loligang.mpsl
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

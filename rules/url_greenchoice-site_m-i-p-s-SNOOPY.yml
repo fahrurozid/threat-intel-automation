@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: greenchoice.site'
+id: 48096f2c-5232-4907-8f5f-0676202ab6c7
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://greenchoice.site/m-i.p-s.SNOOPY'
+references:
+- https://urlhaus.abuse.ch/url/greenchoice.site/m-i.p-s.SNOOPY/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://greenchoice.site/m-i.p-s.SNOOPY
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

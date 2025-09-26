@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: a1.k26i.ru'
+id: c15ff140-3afa-42a3-b35d-acd7ae271fce
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://a1.k26i.ru/ukgl0mt8pl.webm'
+references:
+- https://urlhaus.abuse.ch/url/a1.k26i.ru/ukgl0mt8pl.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://a1.k26i.ru/ukgl0mt8pl.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: watches-omaha-partnerships-median.trycloudflare.com'
+id: 8c5b049b-04b5-4a21-9aff-188ef50aa514
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://watches-omaha-partnerships-median.trycloudflare.com/le/loa.py'
+references:
+- https://urlhaus.abuse.ch/url/watches-omaha-partnerships-median.trycloudflare.com/le/loa.py/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://watches-omaha-partnerships-median.trycloudflare.com/le/loa.py
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

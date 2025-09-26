@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: w4.h-214.ru'
+id: cc82288f-bb88-423e-8d34-2c3e8464d1bc
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://w4.h-214.ru/efn7pm9d59.sh'
+references:
+- https://urlhaus.abuse.ch/url/w4.h-214.ru/efn7pm9d59.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://w4.h-214.ru/efn7pm9d59.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

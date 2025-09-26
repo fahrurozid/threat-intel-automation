@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: k3x.k26i.ru'
+id: df6560fc-ce94-4c61-997d-b6eabea52ee0
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://k3x.k26i.ru/tehoi9ryyh.webm'
+references:
+- https://urlhaus.abuse.ch/url/k3x.k26i.ru/tehoi9ryyh.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://k3x.k26i.ru/tehoi9ryyh.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

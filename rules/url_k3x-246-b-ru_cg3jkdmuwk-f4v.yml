@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: k3x.246-b.ru'
+id: 125e197c-cccb-4bb6-b464-a0f385bd5cc6
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://k3x.246-b.ru/cg3jkdmuwk.f4v'
+references:
+- https://urlhaus.abuse.ch/url/k3x.246-b.ru/cg3jkdmuwk.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://k3x.246-b.ru/cg3jkdmuwk.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

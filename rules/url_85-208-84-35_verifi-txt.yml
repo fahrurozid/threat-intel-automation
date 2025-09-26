@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 85.208.84.35'
+id: df63ea69-b56d-4399-b78d-844f197236a9
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://85.208.84.35/verifi.txt'
+references:
+- https://urlhaus.abuse.ch/url/85.208.84.35/verifi.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://85.208.84.35/verifi.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

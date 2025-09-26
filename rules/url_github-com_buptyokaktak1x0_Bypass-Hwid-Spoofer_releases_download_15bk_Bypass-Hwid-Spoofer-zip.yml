@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: github.com'
+id: 596f6ce3-5c9a-496e-a129-16bcd24cb942
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://github.com/buptyokaktak1x0/Bypass-Hwid-Spoofer/releases/download/15bk/Bypass-Hwid-Spoofer.zip'
+references:
+- https://urlhaus.abuse.ch/url/github.com/buptyokaktak1x0/Bypass-Hwid-Spoofer/releases/download/15bk/Bypass-Hwid-Spoofer.zip/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://github.com/buptyokaktak1x0/Bypass-Hwid-Spoofer/releases/download/15bk/Bypass-Hwid-Spoofer.zip
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

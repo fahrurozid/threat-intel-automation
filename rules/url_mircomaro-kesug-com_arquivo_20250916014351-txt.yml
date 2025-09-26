@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: mircomaro.kesug.com'
+id: e58550b8-1467-4ef1-8183-b87d0ae721b2
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://mircomaro.kesug.com/arquivo_20250916014351.txt'
+references:
+- https://urlhaus.abuse.ch/url/mircomaro.kesug.com/arquivo_20250916014351.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://mircomaro.kesug.com/arquivo_20250916014351.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

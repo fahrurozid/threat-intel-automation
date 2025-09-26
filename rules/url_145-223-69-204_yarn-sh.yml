@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 145.223.69.204'
+id: ca35c5fc-75ef-4819-9f95-63f932020ed5
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://145.223.69.204/yarn.sh'
+references:
+- https://urlhaus.abuse.ch/url/145.223.69.204/yarn.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://145.223.69.204/yarn.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

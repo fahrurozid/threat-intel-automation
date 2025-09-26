@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: b2.7i7y5.ru'
+id: 2425de45-d4a2-46b8-9b17-e0db2f9cf60e
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://b2.7i7y5.ru/enw66qc3lu.f4v'
+references:
+- https://urlhaus.abuse.ch/url/b2.7i7y5.ru/enw66qc3lu.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://b2.7i7y5.ru/enw66qc3lu.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

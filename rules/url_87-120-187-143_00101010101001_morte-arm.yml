@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 87.120.187.143'
+id: c6adf0ed-5a2b-4451-b063-cae5a07c7321
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://87.120.187.143/00101010101001/morte.arm'
+references:
+- https://urlhaus.abuse.ch/url/87.120.187.143/00101010101001/morte.arm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://87.120.187.143/00101010101001/morte.arm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

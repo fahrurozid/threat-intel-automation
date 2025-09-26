@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 80.71.229.25'
+id: 112cda06-0e1d-4498-bf58-0757c4fc3e41
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://80.71.229.25/pro.php'
+references:
+- https://urlhaus.abuse.ch/url/80.71.229.25/pro.php/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://80.71.229.25/pro.php
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

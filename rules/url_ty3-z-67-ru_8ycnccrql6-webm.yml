@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: ty3.z-67.ru'
+id: 47624f46-b939-40d0-bf94-8ff34a11e585
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://ty3.z-67.ru/8ycnccrql6.webm'
+references:
+- https://urlhaus.abuse.ch/url/ty3.z-67.ru/8ycnccrql6.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://ty3.z-67.ru/8ycnccrql6.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

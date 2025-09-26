@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: raw.githubusercontent.com'
+id: abe539a5-77be-4d52-b2fc-2a3887e826a0
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://raw.githubusercontent.com/wertyi20000ph/Hwid-spoofer/refs/heads/main/HwidChange.rar'
+references:
+- https://urlhaus.abuse.ch/url/raw.githubusercontent.com/wertyi20000ph/Hwid-spoofer/refs/heads/main/HwidChange.rar/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://raw.githubusercontent.com/wertyi20000ph/Hwid-spoofer/refs/heads/main/HwidChange.rar
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

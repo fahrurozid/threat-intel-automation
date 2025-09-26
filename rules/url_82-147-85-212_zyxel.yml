@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 82.147.85.212'
+id: 7cf8e790-5934-4fb5-8f8e-8f338354340c
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://82.147.85.212/zyxel'
+references:
+- https://urlhaus.abuse.ch/url/82.147.85.212/zyxel/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://82.147.85.212/zyxel
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

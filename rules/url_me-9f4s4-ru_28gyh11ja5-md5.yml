@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: me.9f4s4.ru'
+id: 8c3613ca-cd1f-4fac-80f5-efee96418f7d
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://me.9f4s4.ru/28gyh11ja5.md5'
+references:
+- https://urlhaus.abuse.ch/url/me.9f4s4.ru/28gyh11ja5.md5/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://me.9f4s4.ru/28gyh11ja5.md5
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

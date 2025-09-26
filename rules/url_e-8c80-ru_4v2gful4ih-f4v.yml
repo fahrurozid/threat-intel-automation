@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: e.8c80.ru'
+id: a996ea3c-80bd-458a-9226-72f69aacadf9
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://e.8c80.ru/4v2gful4ih.f4v'
+references:
+- https://urlhaus.abuse.ch/url/e.8c80.ru/4v2gful4ih.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://e.8c80.ru/4v2gful4ih.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

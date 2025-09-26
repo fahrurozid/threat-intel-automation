@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: vitrolifegroup.gt.tc'
+id: 59e3edea-fd87-4205-a7a2-6d7cbd96e278
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://vitrolifegroup.gt.tc/arquivo_20250917173356.txt'
+references:
+- https://urlhaus.abuse.ch/url/vitrolifegroup.gt.tc/arquivo_20250917173356.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://vitrolifegroup.gt.tc/arquivo_20250917173356.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

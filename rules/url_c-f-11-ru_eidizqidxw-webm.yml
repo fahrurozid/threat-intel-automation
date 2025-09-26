@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: c.f-11.ru'
+id: 959c34fc-1f90-4e93-a910-b03b638669e3
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://c.f-11.ru/eidizqidxw.webm'
+references:
+- https://urlhaus.abuse.ch/url/c.f-11.ru/eidizqidxw.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://c.f-11.ru/eidizqidxw.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: download.voxmebeles.lv'
+id: 21ae0f16-c4e7-4865-b864-2526677f7623
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://download.voxmebeles.lv/Installer_wtb_X64_x86_2025.zip'
+references:
+- https://urlhaus.abuse.ch/url/download.voxmebeles.lv/Installer_wtb_X64_x86_2025.zip/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://download.voxmebeles.lv/Installer_wtb_X64_x86_2025.zip
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

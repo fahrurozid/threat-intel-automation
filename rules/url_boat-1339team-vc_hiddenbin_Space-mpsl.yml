@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: boat.1339team.vc'
+id: cd118881-92fc-4124-aeae-53ec02da93f4
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://boat.1339team.vc/hiddenbin/Space.mpsl'
+references:
+- https://urlhaus.abuse.ch/url/boat.1339team.vc/hiddenbin/Space.mpsl/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://boat.1339team.vc/hiddenbin/Space.mpsl
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

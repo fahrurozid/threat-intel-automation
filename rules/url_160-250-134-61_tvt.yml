@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 160.250.134.61'
+id: 3bfaf387-64be-4763-b004-e6e11d95e37d
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://160.250.134.61/tvt'
+references:
+- https://urlhaus.abuse.ch/url/160.250.134.61/tvt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://160.250.134.61/tvt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

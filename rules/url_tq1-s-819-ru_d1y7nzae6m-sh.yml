@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: tq1.s-819.ru'
+id: cee22677-de5c-4297-baa6-fcf9ea810ec5
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://tq1.s-819.ru/d1y7nzae6m.sh'
+references:
+- https://urlhaus.abuse.ch/url/tq1.s-819.ru/d1y7nzae6m.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://tq1.s-819.ru/d1y7nzae6m.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 176.65.132.57'
+id: 15b2de99-c473-4b7f-bee5-a6cb7c5f50d9
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://176.65.132.57/m68k'
+references:
+- https://urlhaus.abuse.ch/url/176.65.132.57/m68k/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://176.65.132.57/m68k
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

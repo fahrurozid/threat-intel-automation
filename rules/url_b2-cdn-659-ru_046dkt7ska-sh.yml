@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: b2.cdn-659.ru'
+id: b45f1d74-f04d-42bc-9210-80bd7689a38a
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://b2.cdn-659.ru/046dkt7ska.sh'
+references:
+- https://urlhaus.abuse.ch/url/b2.cdn-659.ru/046dkt7ska.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://b2.cdn-659.ru/046dkt7ska.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: qm8.j287y.ru'
+id: 370739d3-e814-498d-8945-2e07afd55b83
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://qm8.j287y.ru/kqw13w389z.md5'
+references:
+- https://urlhaus.abuse.ch/url/qm8.j287y.ru/kqw13w389z.md5/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://qm8.j287y.ru/kqw13w389z.md5
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 103.77.241.144'
+id: 2fb2d4fd-399a-47fa-82c6-d960f4353128
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://103.77.241.144/001010101010010110101011101010101101010111010101/nwfaiehg4ewijfgriehgirehaughrarg.m68k'
+references:
+- https://urlhaus.abuse.ch/url/103.77.241.144/001010101010010110101011101010101101010111010101/nwfaiehg4ewijfgriehgirehaughrarg.m68k/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://103.77.241.144/001010101010010110101011101010101101010111010101/nwfaiehg4ewijfgriehgirehaughrarg.m68k
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

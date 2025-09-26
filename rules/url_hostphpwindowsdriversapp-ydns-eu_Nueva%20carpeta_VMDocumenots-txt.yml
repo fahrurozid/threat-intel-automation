@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: hostphpwindowsdriversapp.ydns.eu'
+id: 68e14fee-6999-4507-9167-49125e0d099f
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://hostphpwindowsdriversapp.ydns.eu/Nueva%20carpeta/VMDocumenots.txt'
+references:
+- https://urlhaus.abuse.ch/url/hostphpwindowsdriversapp.ydns.eu/Nueva%20carpeta/VMDocumenots.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://hostphpwindowsdriversapp.ydns.eu/Nueva%20carpeta/VMDocumenots.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

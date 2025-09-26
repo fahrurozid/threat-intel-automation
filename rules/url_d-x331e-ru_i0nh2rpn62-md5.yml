@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: d.x331e.ru'
+id: 05f64468-8268-4ff7-ae06-0b1cde1255ce
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://d.x331e.ru/i0nh2rpn62.md5'
+references:
+- https://urlhaus.abuse.ch/url/d.x331e.ru/i0nh2rpn62.md5/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://d.x331e.ru/i0nh2rpn62.md5
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

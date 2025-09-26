@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: d.x-05.ru'
+id: ab4c374b-c74d-4d74-b3f3-dfb91486987e
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://d.x-05.ru/o6o5jzmblh.webm'
+references:
+- https://urlhaus.abuse.ch/url/d.x-05.ru/o6o5jzmblh.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://d.x-05.ru/o6o5jzmblh.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

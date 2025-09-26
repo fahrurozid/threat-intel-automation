@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: cdn.riskless.id'
+id: 80feb38d-d802-4404-b4c6-b0506ab0da12
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://cdn.riskless.id/u/Fr17q9.exe'
+references:
+- https://urlhaus.abuse.ch/url/cdn.riskless.id/u/Fr17q9.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://cdn.riskless.id/u/Fr17q9.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

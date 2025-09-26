@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: unitedwealth.lovestoblog.com'
+id: 0c660920-2759-4ca4-b030-3343ba96826f
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://unitedwealth.lovestoblog.com/arquivo_20250918001323.txt'
+references:
+- https://urlhaus.abuse.ch/url/unitedwealth.lovestoblog.com/arquivo_20250918001323.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://unitedwealth.lovestoblog.com/arquivo_20250918001323.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

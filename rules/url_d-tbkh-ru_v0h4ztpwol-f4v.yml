@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: d.tbkh.ru'
+id: 395bd78e-a3e5-439c-a2c0-4dc69eff71a6
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://d.tbkh.ru/v0h4ztpwol.f4v'
+references:
+- https://urlhaus.abuse.ch/url/d.tbkh.ru/v0h4ztpwol.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://d.tbkh.ru/v0h4ztpwol.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: by.4f7m3.ru'
+id: eb8fae3d-56b2-42c4-a904-3f3036bce7c7
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://by.4f7m3.ru/svuglshfh4.md5'
+references:
+- https://urlhaus.abuse.ch/url/by.4f7m3.ru/svuglshfh4.md5/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://by.4f7m3.ru/svuglshfh4.md5
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

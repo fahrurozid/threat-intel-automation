@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: x.e-815.ru'
+id: 2f606066-18eb-4347-bdaa-a2d180e491a3
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://x.e-815.ru/ne0ysv3bye.sh'
+references:
+- https://urlhaus.abuse.ch/url/x.e-815.ru/ne0ysv3bye.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://x.e-815.ru/ne0ysv3bye.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

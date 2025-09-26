@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: info17.infy.uk'
+id: b6db1db8-3bf6-46a3-ab35-ea2e7dc5eaa2
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://info17.infy.uk/arquivo_20250915235151.txt'
+references:
+- https://urlhaus.abuse.ch/url/info17.infy.uk/arquivo_20250915235151.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://info17.infy.uk/arquivo_20250915235151.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: e1.cr-65.ru'
+id: d4f996a7-ae98-4bfa-8744-d5b06863329e
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://e1.cr-65.ru/d6yfc2d9kd.sh'
+references:
+- https://urlhaus.abuse.ch/url/e1.cr-65.ru/d6yfc2d9kd.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://e1.cr-65.ru/d6yfc2d9kd.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

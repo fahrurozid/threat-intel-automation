@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: l.gt-70.ru'
+id: 9ae0efb4-d9d6-4b48-bef6-c1ba242620df
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://l.gt-70.ru/mfolh9dczt.sh'
+references:
+- https://urlhaus.abuse.ch/url/l.gt-70.ru/mfolh9dczt.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://l.gt-70.ru/mfolh9dczt.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

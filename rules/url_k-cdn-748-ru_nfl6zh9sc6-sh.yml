@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: k.cdn-748.ru'
+id: e96eac3f-9614-4a08-86cb-861df10850d0
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://k.cdn-748.ru/nfl6zh9sc6.sh'
+references:
+- https://urlhaus.abuse.ch/url/k.cdn-748.ru/nfl6zh9sc6.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://k.cdn-748.ru/nfl6zh9sc6.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: gdc.li'
+id: 10b8c0f6-7165-46e9-a2f1-7d6a5cf8bd3c
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://gdc.li/faith'
+references:
+- https://urlhaus.abuse.ch/url/gdc.li/faith/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://gdc.li/faith
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

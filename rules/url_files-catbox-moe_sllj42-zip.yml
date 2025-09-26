@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: files.catbox.moe'
+id: 082bdda5-c14b-4d30-a56e-e8ad99728c03
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://files.catbox.moe/sllj42.zip'
+references:
+- https://urlhaus.abuse.ch/url/files.catbox.moe/sllj42.zip/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://files.catbox.moe/sllj42.zip
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

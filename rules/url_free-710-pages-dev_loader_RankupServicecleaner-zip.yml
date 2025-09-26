@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: free-710.pages.dev'
+id: 950074bb-3294-4714-be8f-e58c97d193c0
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://free-710.pages.dev/loader/RankupServicecleaner.zip'
+references:
+- https://urlhaus.abuse.ch/url/free-710.pages.dev/loader/RankupServicecleaner.zip/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://free-710.pages.dev/loader/RankupServicecleaner.zip
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

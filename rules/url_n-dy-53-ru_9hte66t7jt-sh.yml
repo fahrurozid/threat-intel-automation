@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: n.dy-53.ru'
+id: 710c8877-4a45-4260-a4db-a9a712c44d8f
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://n.dy-53.ru/9hte66t7jt.sh'
+references:
+- https://urlhaus.abuse.ch/url/n.dy-53.ru/9hte66t7jt.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://n.dy-53.ru/9hte66t7jt.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

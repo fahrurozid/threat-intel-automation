@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: watches-omaha-partnerships-median.trycloudflare.com'
+id: 201f74a9-877f-4922-bb54-9116dae21d9b
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://watches-omaha-partnerships-median.trycloudflare.com/va/ui.bin'
+references:
+- https://urlhaus.abuse.ch/url/watches-omaha-partnerships-median.trycloudflare.com/va/ui.bin/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://watches-omaha-partnerships-median.trycloudflare.com/va/ui.bin
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

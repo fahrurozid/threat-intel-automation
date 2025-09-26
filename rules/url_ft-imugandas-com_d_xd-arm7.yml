@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: ft.imugandas.com'
+id: 99096612-2a94-490d-8e24-8a26cbceec45
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://ft.imugandas.com/d/xd.arm7'
+references:
+- https://urlhaus.abuse.ch/url/ft.imugandas.com/d/xd.arm7/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://ft.imugandas.com/d/xd.arm7
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

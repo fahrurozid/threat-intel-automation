@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: v4.kd-50.ru'
+id: f08402df-69b6-45cb-9638-2a2236d6ab8a
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://v4.kd-50.ru/nx1ev9wdny.sh'
+references:
+- https://urlhaus.abuse.ch/url/v4.kd-50.ru/nx1ev9wdny.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://v4.kd-50.ru/nx1ev9wdny.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

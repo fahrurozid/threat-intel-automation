@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: g5.f969.ru'
+id: db280cb3-528a-415f-9ffc-b3b1e265a813
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://g5.f969.ru/2ut9ro6hlv.webm'
+references:
+- https://urlhaus.abuse.ch/url/g5.f969.ru/2ut9ro6hlv.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://g5.f969.ru/2ut9ro6hlv.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

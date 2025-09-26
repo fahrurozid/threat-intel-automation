@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: k.m-754.ru'
+id: 07c772bf-4e8a-4240-902f-cb928eb84c58
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://k.m-754.ru/28qttvorsz.sh'
+references:
+- https://urlhaus.abuse.ch/url/k.m-754.ru/28qttvorsz.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://k.m-754.ru/28qttvorsz.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 163.227.230.253'
+id: bb1d4738-7e57-4e6f-b2f4-6d326f0b2e18
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://163.227.230.253/hiddenbin/boatnet.ppc'
+references:
+- https://urlhaus.abuse.ch/url/163.227.230.253/hiddenbin/boatnet.ppc/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://163.227.230.253/hiddenbin/boatnet.ppc
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 202.155.95.62'
+id: 8003ef0d-53a4-4c37-ad8b-353df1d1c1aa
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://202.155.95.62/00101010101001/morte.arc'
+references:
+- https://urlhaus.abuse.ch/url/202.155.95.62/00101010101001/morte.arc/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://202.155.95.62/00101010101001/morte.arc
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

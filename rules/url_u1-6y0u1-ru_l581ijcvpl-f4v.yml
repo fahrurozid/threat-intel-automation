@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: u1.6y0u1.ru'
+id: 4a00cabf-b5a7-42d2-bc63-0a40236490d0
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://u1.6y0u1.ru/l581ijcvpl.f4v'
+references:
+- https://urlhaus.abuse.ch/url/u1.6y0u1.ru/l581ijcvpl.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://u1.6y0u1.ru/l581ijcvpl.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

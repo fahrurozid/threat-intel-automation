@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: zantux-plan.duckdns.org'
+id: 8c68056e-c4c1-48b8-8c49-db3ab9f9a9a7
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://zantux-plan.duckdns.org/bins/morte.m68k'
+references:
+- https://urlhaus.abuse.ch/url/zantux-plan.duckdns.org/bins/morte.m68k/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://zantux-plan.duckdns.org/bins/morte.m68k
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

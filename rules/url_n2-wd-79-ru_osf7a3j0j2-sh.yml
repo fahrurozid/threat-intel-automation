@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: n2.wd-79.ru'
+id: 8cc34b22-c688-4392-82c1-4ed2c6b3d7a2
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://n2.wd-79.ru/osf7a3j0j2.sh'
+references:
+- https://urlhaus.abuse.ch/url/n2.wd-79.ru/osf7a3j0j2.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://n2.wd-79.ru/osf7a3j0j2.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

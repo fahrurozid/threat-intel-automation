@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: t.zik9.ru'
+id: 967368c5-77be-4308-b3bf-72437bdf98e2
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://t.zik9.ru/rqgr2x42z9.webm'
+references:
+- https://urlhaus.abuse.ch/url/t.zik9.ru/rqgr2x42z9.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://t.zik9.ru/rqgr2x42z9.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 157.20.32.209'
+id: c2d568c6-ef44-48f3-8735-ad2de036be17
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://157.20.32.209/bins/morte.mpsl'
+references:
+- https://urlhaus.abuse.ch/url/157.20.32.209/bins/morte.mpsl/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://157.20.32.209/bins/morte.mpsl
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 194.31.222.17'
+id: 9b62f09e-b28f-405c-9266-7c31a9354ae9
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://194.31.222.17/nmips'
+references:
+- https://urlhaus.abuse.ch/url/194.31.222.17/nmips/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://194.31.222.17/nmips
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

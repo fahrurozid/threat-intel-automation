@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: r5.k002.ru'
+id: 261330c7-fded-4e65-8079-caeec7a3d7d9
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://r5.k002.ru/qpe1ruabzx.webm'
+references:
+- https://urlhaus.abuse.ch/url/r5.k002.ru/qpe1ruabzx.webm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://r5.k002.ru/qpe1ruabzx.webm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

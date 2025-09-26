@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: snapbeam.space'
+id: f32f9f1c-78fa-470d-80d9-5d0ab458e854
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://snapbeam.space/'
+references:
+- https://urlhaus.abuse.ch/url/snapbeam.space//
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://snapbeam.space/
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

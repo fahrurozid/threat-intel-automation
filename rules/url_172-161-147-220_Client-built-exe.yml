@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 172.161.147.220'
+id: 90dc3c2a-cc6e-402f-8fed-1aa1d1b69b1d
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://172.161.147.220/Client-built.exe'
+references:
+- https://urlhaus.abuse.ch/url/172.161.147.220/Client-built.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://172.161.147.220/Client-built.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: e1.cdn-626.ru'
+id: 310a5d41-a691-4187-bae6-d269b8e6965d
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://e1.cdn-626.ru/0o4zvrv9b8.sh'
+references:
+- https://urlhaus.abuse.ch/url/e1.cdn-626.ru/0o4zvrv9b8.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://e1.cdn-626.ru/0o4zvrv9b8.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

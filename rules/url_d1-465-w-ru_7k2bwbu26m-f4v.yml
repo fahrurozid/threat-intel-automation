@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: d1.465-w.ru'
+id: 4d225bfe-03de-4f11-ba3c-0209496f9582
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://d1.465-w.ru/7k2bwbu26m.f4v'
+references:
+- https://urlhaus.abuse.ch/url/d1.465-w.ru/7k2bwbu26m.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://d1.465-w.ru/7k2bwbu26m.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 23.160.56.213'
+id: 85ae869a-328b-418b-bd51-67c24df86df7
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://23.160.56.213/p.txt'
+references:
+- https://urlhaus.abuse.ch/url/23.160.56.213/p.txt/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://23.160.56.213/p.txt
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

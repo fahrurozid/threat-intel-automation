@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: xq0.h924i.ru'
+id: b9427d59-5acd-4b33-b9f7-73b1a8819e97
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://xq0.h924i.ru/rl80fkd1gw.f4v'
+references:
+- https://urlhaus.abuse.ch/url/xq0.h924i.ru/rl80fkd1gw.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://xq0.h924i.ru/rl80fkd1gw.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

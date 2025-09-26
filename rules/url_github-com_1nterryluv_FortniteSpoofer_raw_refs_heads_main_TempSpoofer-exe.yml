@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: github.com'
+id: feb7bceb-bf5f-4530-8df8-6c568cc741a2
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://github.com/1nterryluv/FortniteSpoofer/raw/refs/heads/main/TempSpoofer.exe'
+references:
+- https://urlhaus.abuse.ch/url/github.com/1nterryluv/FortniteSpoofer/raw/refs/heads/main/TempSpoofer.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://github.com/1nterryluv/FortniteSpoofer/raw/refs/heads/main/TempSpoofer.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

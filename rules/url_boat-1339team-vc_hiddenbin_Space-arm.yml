@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: boat.1339team.vc'
+id: 6c3106b2-b4c0-4606-9037-6093a1a4cf1a
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://boat.1339team.vc/hiddenbin/Space.arm'
+references:
+- https://urlhaus.abuse.ch/url/boat.1339team.vc/hiddenbin/Space.arm/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://boat.1339team.vc/hiddenbin/Space.arm
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

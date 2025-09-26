@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: h1.6n47.ru'
+id: 5e1ea1eb-ce6d-4ddd-a8d4-e1c5936337b9
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://h1.6n47.ru/mwonk4e3f6.f4v'
+references:
+- https://urlhaus.abuse.ch/url/h1.6n47.ru/mwonk4e3f6.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://h1.6n47.ru/mwonk4e3f6.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

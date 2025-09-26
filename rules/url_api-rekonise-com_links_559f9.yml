@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: api.rekonise.com'
+id: 24475f31-b6de-44b8-b397-e23728c095e7
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://api.rekonise.com/links/559f9'
+references:
+- https://urlhaus.abuse.ch/url/api.rekonise.com/links/559f9/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://api.rekonise.com/links/559f9
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

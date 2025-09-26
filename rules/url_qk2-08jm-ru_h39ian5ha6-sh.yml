@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: qk2.08jm.ru'
+id: 0dc7bb03-4fed-4a29-80fb-7cecad72d1a9
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://qk2.08jm.ru/h39ian5ha6.sh'
+references:
+- https://urlhaus.abuse.ch/url/qk2.08jm.ru/h39ian5ha6.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://qk2.08jm.ru/h39ian5ha6.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

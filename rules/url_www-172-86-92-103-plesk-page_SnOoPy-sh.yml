@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: www.172-86-92-103.plesk.page'
+id: c306a41d-2559-46e8-81f9-1c8cc08fbb60
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://www.172-86-92-103.plesk.page/SnOoPy.sh'
+references:
+- https://urlhaus.abuse.ch/url/www.172-86-92-103.plesk.page/SnOoPy.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://www.172-86-92-103.plesk.page/SnOoPy.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

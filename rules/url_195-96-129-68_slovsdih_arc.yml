@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 195.96.129.68'
+id: 6e253765-5c11-4a72-933f-7ee0f187a603
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://195.96.129.68/slovsdih/arc'
+references:
+- https://urlhaus.abuse.ch/url/195.96.129.68/slovsdih/arc/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://195.96.129.68/slovsdih/arc
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

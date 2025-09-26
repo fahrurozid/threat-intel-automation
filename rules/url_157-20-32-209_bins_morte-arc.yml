@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 157.20.32.209'
+id: b991635d-c3f9-4424-98f5-44c525126256
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://157.20.32.209/bins/morte.arc'
+references:
+- https://urlhaus.abuse.ch/url/157.20.32.209/bins/morte.arc/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://157.20.32.209/bins/morte.arc
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

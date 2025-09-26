@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: textbin.net'
+id: a5e1484c-418e-4c17-b80b-ef33931ce755
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://textbin.net/raw/y4qlg0fczh'
+references:
+- https://urlhaus.abuse.ch/url/textbin.net/raw/y4qlg0fczh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://textbin.net/raw/y4qlg0fczh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

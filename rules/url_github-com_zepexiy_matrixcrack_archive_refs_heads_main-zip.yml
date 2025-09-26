@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: github.com'
+id: 33a55c5a-961e-4bc3-a1e0-c48f2ece74b9
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://github.com/zepexiy/matrixcrack/archive/refs/heads/main.zip'
+references:
+- https://urlhaus.abuse.ch/url/github.com/zepexiy/matrixcrack/archive/refs/heads/main.zip/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://github.com/zepexiy/matrixcrack/archive/refs/heads/main.zip
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: h1.e-134.ru'
+id: 93eaac38-148e-42a0-b272-dbb85a134469
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://h1.e-134.ru/cmg0dftvo8.sh'
+references:
+- https://urlhaus.abuse.ch/url/h1.e-134.ru/cmg0dftvo8.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://h1.e-134.ru/cmg0dftvo8.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

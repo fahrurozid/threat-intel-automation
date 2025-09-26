@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: t.6b96.ru'
+id: 363fbc7a-98e1-4a91-a835-b059932f9ce5
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://t.6b96.ru/36gbnpxgbj.f4v'
+references:
+- https://urlhaus.abuse.ch/url/t.6b96.ru/36gbnpxgbj.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://t.6b96.ru/36gbnpxgbj.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

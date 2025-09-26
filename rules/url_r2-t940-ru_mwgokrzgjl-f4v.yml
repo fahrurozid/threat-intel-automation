@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: r2.t940.ru'
+id: 569816e3-5245-4e0d-8156-76eb2bd02dbc
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://r2.t940.ru/mwgokrzgjl.f4v'
+references:
+- https://urlhaus.abuse.ch/url/r2.t940.ru/mwgokrzgjl.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://r2.t940.ru/mwgokrzgjl.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

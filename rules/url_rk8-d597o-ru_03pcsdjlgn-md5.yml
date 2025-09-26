@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: rk8.d597o.ru'
+id: 4910db6d-51a3-40fb-a2d2-5c6f6e731f5f
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://rk8.d597o.ru/03pcsdjlgn.md5'
+references:
+- https://urlhaus.abuse.ch/url/rk8.d597o.ru/03pcsdjlgn.md5/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://rk8.d597o.ru/03pcsdjlgn.md5
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

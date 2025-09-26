@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: g.cdn-568.ru'
+id: a14ef2d4-7eb4-45b3-bb14-6d567539f18e
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://g.cdn-568.ru/ms6sc0yuck.sh'
+references:
+- https://urlhaus.abuse.ch/url/g.cdn-568.ru/ms6sc0yuck.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://g.cdn-568.ru/ms6sc0yuck.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

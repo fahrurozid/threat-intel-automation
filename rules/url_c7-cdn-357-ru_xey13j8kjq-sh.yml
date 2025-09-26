@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: c7.cdn-357.ru'
+id: 38042e91-1e65-4d74-8237-1e3e39a87bf6
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://c7.cdn-357.ru/xey13j8kjq.sh'
+references:
+- https://urlhaus.abuse.ch/url/c7.cdn-357.ru/xey13j8kjq.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://c7.cdn-357.ru/xey13j8kjq.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

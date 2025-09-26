@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: k7.kd-50.ru'
+id: 2a8e0664-be34-47cf-afc9-ec0f5592fe37
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://k7.kd-50.ru/p1n59y6tu6.sh'
+references:
+- https://urlhaus.abuse.ch/url/k7.kd-50.ru/p1n59y6tu6.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://k7.kd-50.ru/p1n59y6tu6.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

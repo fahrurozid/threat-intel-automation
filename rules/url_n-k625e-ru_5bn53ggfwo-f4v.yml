@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: n.k625e.ru'
+id: 30bb9d82-875a-48a8-a71d-9b4bfb9799fc
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://n.k625e.ru/5bn53ggfwo.f4v'
+references:
+- https://urlhaus.abuse.ch/url/n.k625e.ru/5bn53ggfwo.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://n.k625e.ru/5bn53ggfwo.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

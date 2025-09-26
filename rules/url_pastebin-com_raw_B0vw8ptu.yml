@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: pastebin.com'
+id: 789c32d0-6e37-4116-98ea-113f078ff614
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://pastebin.com/raw/B0vw8ptu'
+references:
+- https://urlhaus.abuse.ch/url/pastebin.com/raw/B0vw8ptu/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://pastebin.com/raw/B0vw8ptu
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

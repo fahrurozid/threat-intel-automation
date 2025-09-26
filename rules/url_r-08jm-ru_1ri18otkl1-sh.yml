@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: r.08jm.ru'
+id: 3f2e4b62-1010-4afe-9a87-83f34bf5eb99
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://r.08jm.ru/1ri18otkl1.sh'
+references:
+- https://urlhaus.abuse.ch/url/r.08jm.ru/1ri18otkl1.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://r.08jm.ru/1ri18otkl1.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

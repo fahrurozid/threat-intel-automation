@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: stresse.st'
+id: 21e17d73-5c24-4f8e-8361-29939e1d2894
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://stresse.st/download/direct/2533623/stresse-3.0.0.msi'
+references:
+- https://urlhaus.abuse.ch/url/stresse.st/download/direct/2533623/stresse-3.0.0.msi/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://stresse.st/download/direct/2533623/stresse-3.0.0.msi
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

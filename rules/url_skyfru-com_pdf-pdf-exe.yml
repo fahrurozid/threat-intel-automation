@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: skyfru.com'
+id: dd39e620-de28-49dd-b838-8ec982c9eb58
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://skyfru.com/pdf.pdf.exe'
+references:
+- https://urlhaus.abuse.ch/url/skyfru.com/pdf.pdf.exe/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://skyfru.com/pdf.pdf.exe
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

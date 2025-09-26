@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: h.q463a.ru'
+id: 795588a6-791a-4c4b-90e1-c59fc3f17d43
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://h.q463a.ru/3ii96iuvu4.f4v'
+references:
+- https://urlhaus.abuse.ch/url/h.q463a.ru/3ii96iuvu4.f4v/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://h.q463a.ru/3ii96iuvu4.f4v
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

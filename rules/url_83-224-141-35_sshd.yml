@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: 83.224.141.35'
+id: d1725404-0d52-46cb-a053-361f58282ac4
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: http://83.224.141.35/sshd'
+references:
+- https://urlhaus.abuse.ch/url/83.224.141.35/sshd/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: http://83.224.141.35/sshd
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high

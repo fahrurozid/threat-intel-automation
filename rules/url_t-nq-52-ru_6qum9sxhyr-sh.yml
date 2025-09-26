@@ -1,0 +1,20 @@
+title: 'Koneksi ke URL Berbahaya Dikenal: t.nq-52.ru'
+id: 7c05deb4-ec7d-412c-9ad4-d533db6e8885
+status: stable
+description: 'Aturan ini mendeteksi lalu lintas jaringan ke URL berbahaya yang terdaftar
+  di URLhaus. URL: https://t.nq-52.ru/6qum9sxhyr.sh'
+references:
+- https://urlhaus.abuse.ch/url/t.nq-52.ru/6qum9sxhyr.sh/
+author: Threat-Rule-Generator
+date: '2025-09-26'
+logsource:
+  category: proxy
+  product: zeek
+detection:
+  selection:
+    url.original: https://t.nq-52.ru/6qum9sxhyr.sh
+  condition: selection
+falsepositives:
+- Sangat jarang terjadi, tetapi bisa jika domain telah bersih dan diambil alih untuk
+  tujuan yang sah.
+level: high
